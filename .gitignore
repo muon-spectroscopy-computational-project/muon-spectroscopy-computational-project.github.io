@@ -1,4 +1,6 @@
-_site/
+Makefile
+site/
 .sass-cache/
 .jekyll-cache/
 .jekyll-metadata
+
