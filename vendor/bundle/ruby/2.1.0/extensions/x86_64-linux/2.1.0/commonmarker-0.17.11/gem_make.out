@@ -1,0 +1,65 @@
+/usr/bin/ruby.ruby2.1 extconf.rb
+creating Makefile
+
+make "DESTDIR=" clean
+rm -f 
+rm -f commonmarker.so  *.o  *.bak mkmf.log .*.time
+
+make "DESTDIR="
+gcc -I. -I/usr/include/ruby-2.1.0/x86_64-linux-gnu -I/usr/include/ruby-2.1.0/ruby/backward -I/usr/include/ruby-2.1.0 -I.   -fPIC -fmessage-length=0 -grecord-gcc-switches -O2 -Wall -D_FORTIFY_SOURCE=2 -fstack-protector -funwind-tables -fasynchronous-unwind-tables -g -fno-strict-aliasing -fPIC -std=c99  -o arena.o -c arena.c
+gcc -I. -I/usr/include/ruby-2.1.0/x86_64-linux-gnu -I/usr/include/ruby-2.1.0/ruby/backward -I/usr/include/ruby-2.1.0 -I.   -fPIC -fmessage-length=0 -grecord-gcc-switches -O2 -Wall -D_FORTIFY_SOURCE=2 -fstack-protector -funwind-tables -fasynchronous-unwind-tables -g -fno-strict-aliasing -fPIC -std=c99  -o autolink.o -c autolink.c
+gcc -I. -I/usr/include/ruby-2.1.0/x86_64-linux-gnu -I/usr/include/ruby-2.1.0/ruby/backward -I/usr/include/ruby-2.1.0 -I.   -fPIC -fmessage-length=0 -grecord-gcc-switches -O2 -Wall -D_FORTIFY_SOURCE=2 -fstack-protector -funwind-tables -fasynchronous-unwind-tables -g -fno-strict-aliasing -fPIC -std=c99  -o blocks.o -c blocks.c
+gcc -I. -I/usr/include/ruby-2.1.0/x86_64-linux-gnu -I/usr/include/ruby-2.1.0/ruby/backward -I/usr/include/ruby-2.1.0 -I.   -fPIC -fmessage-length=0 -grecord-gcc-switches -O2 -Wall -D_FORTIFY_SOURCE=2 -fstack-protector -funwind-tables -fasynchronous-unwind-tables -g -fno-strict-aliasing -fPIC -std=c99  -o buffer.o -c buffer.c
+gcc -I. -I/usr/include/ruby-2.1.0/x86_64-linux-gnu -I/usr/include/ruby-2.1.0/ruby/backward -I/usr/include/ruby-2.1.0 -I.   -fPIC -fmessage-length=0 -grecord-gcc-switches -O2 -Wall -D_FORTIFY_SOURCE=2 -fstack-protector -funwind-tables -fasynchronous-unwind-tables -g -fno-strict-aliasing -fPIC -std=c99  -o cmark.o -c cmark.c
+gcc -I. -I/usr/include/ruby-2.1.0/x86_64-linux-gnu -I/usr/include/ruby-2.1.0/ruby/backward -I/usr/include/ruby-2.1.0 -I.   -fPIC -fmessage-length=0 -grecord-gcc-switches -O2 -Wall -D_FORTIFY_SOURCE=2 -fstack-protector -funwind-tables -fasynchronous-unwind-tables -g -fno-strict-aliasing -fPIC -std=c99  -o cmark_ctype.o -c cmark_ctype.c
+gcc -I. -I/usr/include/ruby-2.1.0/x86_64-linux-gnu -I/usr/include/ruby-2.1.0/ruby/backward -I/usr/include/ruby-2.1.0 -I.   -fPIC -fmessage-length=0 -grecord-gcc-switches -O2 -Wall -D_FORTIFY_SOURCE=2 -fstack-protector -funwind-tables -fasynchronous-unwind-tables -g -fno-strict-aliasing -fPIC -std=c99  -o commonmark.o -c commonmark.c
+gcc -I. -I/usr/include/ruby-2.1.0/x86_64-linux-gnu -I/usr/include/ruby-2.1.0/ruby/backward -I/usr/include/ruby-2.1.0 -I.   -fPIC -fmessage-length=0 -grecord-gcc-switches -O2 -Wall -D_FORTIFY_SOURCE=2 -fstack-protector -funwind-tables -fasynchronous-unwind-tables -g -fno-strict-aliasing -fPIC -std=c99  -o commonmarker.o -c commonmarker.c
+In file included from houdini.h:9:0,
+                 from commonmarker.c:3:
+config.h:8:0: warning: "HAVE_STDBOOL_H" redefined
+ #define HAVE_STDBOOL_H
+ 
+In file included from /usr/include/ruby-2.1.0/ruby/ruby.h:24:0,
+                 from /usr/include/ruby-2.1.0/ruby.h:33,
+                 from commonmarker.h:9,
+                 from commonmarker.c:1:
+/usr/include/ruby-2.1.0/x86_64-linux-gnu/ruby/config.h:26:0: note: this is the location of the previous definition
+ #define HAVE_STDBOOL_H 1
+ 
+commonmarker.c: In function ‘rb_parse_document’:
+commonmarker.c:270:12: warning: variable ‘options’ set but not used [-Wunused-but-set-variable]
+   int len, options;
+            ^~~~~~~
+gcc -I. -I/usr/include/ruby-2.1.0/x86_64-linux-gnu -I/usr/include/ruby-2.1.0/ruby/backward -I/usr/include/ruby-2.1.0 -I.   -fPIC -fmessage-length=0 -grecord-gcc-switches -O2 -Wall -D_FORTIFY_SOURCE=2 -fstack-protector -funwind-tables -fasynchronous-unwind-tables -g -fno-strict-aliasing -fPIC -std=c99  -o core-extensions.o -c core-extensions.c
+gcc -I. -I/usr/include/ruby-2.1.0/x86_64-linux-gnu -I/usr/include/ruby-2.1.0/ruby/backward -I/usr/include/ruby-2.1.0 -I.   -fPIC -fmessage-length=0 -grecord-gcc-switches -O2 -Wall -D_FORTIFY_SOURCE=2 -fstack-protector -funwind-tables -fasynchronous-unwind-tables -g -fno-strict-aliasing -fPIC -std=c99  -o ext_scanners.o -c ext_scanners.c
+gcc -I. -I/usr/include/ruby-2.1.0/x86_64-linux-gnu -I/usr/include/ruby-2.1.0/ruby/backward -I/usr/include/ruby-2.1.0 -I.   -fPIC -fmessage-length=0 -grecord-gcc-switches -O2 -Wall -D_FORTIFY_SOURCE=2 -fstack-protector -funwind-tables -fasynchronous-unwind-tables -g -fno-strict-aliasing -fPIC -std=c99  -o footnotes.o -c footnotes.c
+gcc -I. -I/usr/include/ruby-2.1.0/x86_64-linux-gnu -I/usr/include/ruby-2.1.0/ruby/backward -I/usr/include/ruby-2.1.0 -I.   -fPIC -fmessage-length=0 -grecord-gcc-switches -O2 -Wall -D_FORTIFY_SOURCE=2 -fstack-protector -funwind-tables -fasynchronous-unwind-tables -g -fno-strict-aliasing -fPIC -std=c99  -o houdini_href_e.o -c houdini_href_e.c
+gcc -I. -I/usr/include/ruby-2.1.0/x86_64-linux-gnu -I/usr/include/ruby-2.1.0/ruby/backward -I/usr/include/ruby-2.1.0 -I.   -fPIC -fmessage-length=0 -grecord-gcc-switches -O2 -Wall -D_FORTIFY_SOURCE=2 -fstack-protector -funwind-tables -fasynchronous-unwind-tables -g -fno-strict-aliasing -fPIC -std=c99  -o houdini_html_e.o -c houdini_html_e.c
+gcc -I. -I/usr/include/ruby-2.1.0/x86_64-linux-gnu -I/usr/include/ruby-2.1.0/ruby/backward -I/usr/include/ruby-2.1.0 -I.   -fPIC -fmessage-length=0 -grecord-gcc-switches -O2 -Wall -D_FORTIFY_SOURCE=2 -fstack-protector -funwind-tables -fasynchronous-unwind-tables -g -fno-strict-aliasing -fPIC -std=c99  -o houdini_html_u.o -c houdini_html_u.c
+gcc -I. -I/usr/include/ruby-2.1.0/x86_64-linux-gnu -I/usr/include/ruby-2.1.0/ruby/backward -I/usr/include/ruby-2.1.0 -I.   -fPIC -fmessage-length=0 -grecord-gcc-switches -O2 -Wall -D_FORTIFY_SOURCE=2 -fstack-protector -funwind-tables -fasynchronous-unwind-tables -g -fno-strict-aliasing -fPIC -std=c99  -o html.o -c html.c
+gcc -I. -I/usr/include/ruby-2.1.0/x86_64-linux-gnu -I/usr/include/ruby-2.1.0/ruby/backward -I/usr/include/ruby-2.1.0 -I.   -fPIC -fmessage-length=0 -grecord-gcc-switches -O2 -Wall -D_FORTIFY_SOURCE=2 -fstack-protector -funwind-tables -fasynchronous-unwind-tables -g -fno-strict-aliasing -fPIC -std=c99  -o inlines.o -c inlines.c
+gcc -I. -I/usr/include/ruby-2.1.0/x86_64-linux-gnu -I/usr/include/ruby-2.1.0/ruby/backward -I/usr/include/ruby-2.1.0 -I.   -fPIC -fmessage-length=0 -grecord-gcc-switches -O2 -Wall -D_FORTIFY_SOURCE=2 -fstack-protector -funwind-tables -fasynchronous-unwind-tables -g -fno-strict-aliasing -fPIC -std=c99  -o iterator.o -c iterator.c
+gcc -I. -I/usr/include/ruby-2.1.0/x86_64-linux-gnu -I/usr/include/ruby-2.1.0/ruby/backward -I/usr/include/ruby-2.1.0 -I.   -fPIC -fmessage-length=0 -grecord-gcc-switches -O2 -Wall -D_FORTIFY_SOURCE=2 -fstack-protector -funwind-tables -fasynchronous-unwind-tables -g -fno-strict-aliasing -fPIC -std=c99  -o latex.o -c latex.c
+gcc -I. -I/usr/include/ruby-2.1.0/x86_64-linux-gnu -I/usr/include/ruby-2.1.0/ruby/backward -I/usr/include/ruby-2.1.0 -I.   -fPIC -fmessage-length=0 -grecord-gcc-switches -O2 -Wall -D_FORTIFY_SOURCE=2 -fstack-protector -funwind-tables -fasynchronous-unwind-tables -g -fno-strict-aliasing -fPIC -std=c99  -o linked_list.o -c linked_list.c
+gcc -I. -I/usr/include/ruby-2.1.0/x86_64-linux-gnu -I/usr/include/ruby-2.1.0/ruby/backward -I/usr/include/ruby-2.1.0 -I.   -fPIC -fmessage-length=0 -grecord-gcc-switches -O2 -Wall -D_FORTIFY_SOURCE=2 -fstack-protector -funwind-tables -fasynchronous-unwind-tables -g -fno-strict-aliasing -fPIC -std=c99  -o man.o -c man.c
+gcc -I. -I/usr/include/ruby-2.1.0/x86_64-linux-gnu -I/usr/include/ruby-2.1.0/ruby/backward -I/usr/include/ruby-2.1.0 -I.   -fPIC -fmessage-length=0 -grecord-gcc-switches -O2 -Wall -D_FORTIFY_SOURCE=2 -fstack-protector -funwind-tables -fasynchronous-unwind-tables -g -fno-strict-aliasing -fPIC -std=c99  -o map.o -c map.c
+gcc -I. -I/usr/include/ruby-2.1.0/x86_64-linux-gnu -I/usr/include/ruby-2.1.0/ruby/backward -I/usr/include/ruby-2.1.0 -I.   -fPIC -fmessage-length=0 -grecord-gcc-switches -O2 -Wall -D_FORTIFY_SOURCE=2 -fstack-protector -funwind-tables -fasynchronous-unwind-tables -g -fno-strict-aliasing -fPIC -std=c99  -o node.o -c node.c
+gcc -I. -I/usr/include/ruby-2.1.0/x86_64-linux-gnu -I/usr/include/ruby-2.1.0/ruby/backward -I/usr/include/ruby-2.1.0 -I.   -fPIC -fmessage-length=0 -grecord-gcc-switches -O2 -Wall -D_FORTIFY_SOURCE=2 -fstack-protector -funwind-tables -fasynchronous-unwind-tables -g -fno-strict-aliasing -fPIC -std=c99  -o plaintext.o -c plaintext.c
+gcc -I. -I/usr/include/ruby-2.1.0/x86_64-linux-gnu -I/usr/include/ruby-2.1.0/ruby/backward -I/usr/include/ruby-2.1.0 -I.   -fPIC -fmessage-length=0 -grecord-gcc-switches -O2 -Wall -D_FORTIFY_SOURCE=2 -fstack-protector -funwind-tables -fasynchronous-unwind-tables -g -fno-strict-aliasing -fPIC -std=c99  -o plugin.o -c plugin.c
+gcc -I. -I/usr/include/ruby-2.1.0/x86_64-linux-gnu -I/usr/include/ruby-2.1.0/ruby/backward -I/usr/include/ruby-2.1.0 -I.   -fPIC -fmessage-length=0 -grecord-gcc-switches -O2 -Wall -D_FORTIFY_SOURCE=2 -fstack-protector -funwind-tables -fasynchronous-unwind-tables -g -fno-strict-aliasing -fPIC -std=c99  -o references.o -c references.c
+gcc -I. -I/usr/include/ruby-2.1.0/x86_64-linux-gnu -I/usr/include/ruby-2.1.0/ruby/backward -I/usr/include/ruby-2.1.0 -I.   -fPIC -fmessage-length=0 -grecord-gcc-switches -O2 -Wall -D_FORTIFY_SOURCE=2 -fstack-protector -funwind-tables -fasynchronous-unwind-tables -g -fno-strict-aliasing -fPIC -std=c99  -o registry.o -c registry.c
+gcc -I. -I/usr/include/ruby-2.1.0/x86_64-linux-gnu -I/usr/include/ruby-2.1.0/ruby/backward -I/usr/include/ruby-2.1.0 -I.   -fPIC -fmessage-length=0 -grecord-gcc-switches -O2 -Wall -D_FORTIFY_SOURCE=2 -fstack-protector -funwind-tables -fasynchronous-unwind-tables -g -fno-strict-aliasing -fPIC -std=c99  -o render.o -c render.c
+gcc -I. -I/usr/include/ruby-2.1.0/x86_64-linux-gnu -I/usr/include/ruby-2.1.0/ruby/backward -I/usr/include/ruby-2.1.0 -I.   -fPIC -fmessage-length=0 -grecord-gcc-switches -O2 -Wall -D_FORTIFY_SOURCE=2 -fstack-protector -funwind-tables -fasynchronous-unwind-tables -g -fno-strict-aliasing -fPIC -std=c99  -o scanners.o -c scanners.c
+gcc -I. -I/usr/include/ruby-2.1.0/x86_64-linux-gnu -I/usr/include/ruby-2.1.0/ruby/backward -I/usr/include/ruby-2.1.0 -I.   -fPIC -fmessage-length=0 -grecord-gcc-switches -O2 -Wall -D_FORTIFY_SOURCE=2 -fstack-protector -funwind-tables -fasynchronous-unwind-tables -g -fno-strict-aliasing -fPIC -std=c99  -o strikethrough.o -c strikethrough.c
+gcc -I. -I/usr/include/ruby-2.1.0/x86_64-linux-gnu -I/usr/include/ruby-2.1.0/ruby/backward -I/usr/include/ruby-2.1.0 -I.   -fPIC -fmessage-length=0 -grecord-gcc-switches -O2 -Wall -D_FORTIFY_SOURCE=2 -fstack-protector -funwind-tables -fasynchronous-unwind-tables -g -fno-strict-aliasing -fPIC -std=c99  -o syntax_extension.o -c syntax_extension.c
+gcc -I. -I/usr/include/ruby-2.1.0/x86_64-linux-gnu -I/usr/include/ruby-2.1.0/ruby/backward -I/usr/include/ruby-2.1.0 -I.   -fPIC -fmessage-length=0 -grecord-gcc-switches -O2 -Wall -D_FORTIFY_SOURCE=2 -fstack-protector -funwind-tables -fasynchronous-unwind-tables -g -fno-strict-aliasing -fPIC -std=c99  -o table.o -c table.c
+gcc -I. -I/usr/include/ruby-2.1.0/x86_64-linux-gnu -I/usr/include/ruby-2.1.0/ruby/backward -I/usr/include/ruby-2.1.0 -I.   -fPIC -fmessage-length=0 -grecord-gcc-switches -O2 -Wall -D_FORTIFY_SOURCE=2 -fstack-protector -funwind-tables -fasynchronous-unwind-tables -g -fno-strict-aliasing -fPIC -std=c99  -o tagfilter.o -c tagfilter.c
+gcc -I. -I/usr/include/ruby-2.1.0/x86_64-linux-gnu -I/usr/include/ruby-2.1.0/ruby/backward -I/usr/include/ruby-2.1.0 -I.   -fPIC -fmessage-length=0 -grecord-gcc-switches -O2 -Wall -D_FORTIFY_SOURCE=2 -fstack-protector -funwind-tables -fasynchronous-unwind-tables -g -fno-strict-aliasing -fPIC -std=c99  -o utf8.o -c utf8.c
+gcc -I. -I/usr/include/ruby-2.1.0/x86_64-linux-gnu -I/usr/include/ruby-2.1.0/ruby/backward -I/usr/include/ruby-2.1.0 -I.   -fPIC -fmessage-length=0 -grecord-gcc-switches -O2 -Wall -D_FORTIFY_SOURCE=2 -fstack-protector -funwind-tables -fasynchronous-unwind-tables -g -fno-strict-aliasing -fPIC -std=c99  -o xml.o -c xml.c
+rm -f commonmarker.so
+gcc -shared -o commonmarker.so arena.o autolink.o blocks.o buffer.o cmark.o cmark_ctype.o commonmark.o commonmarker.o core-extensions.o ext_scanners.o footnotes.o houdini_href_e.o houdini_html_e.o houdini_html_u.o html.o inlines.o iterator.o latex.o linked_list.o man.o map.o node.o plaintext.o plugin.o references.o registry.o render.o scanners.o strikethrough.o syntax_extension.o table.o tagfilter.o utf8.o xml.o -L. -L/usr/lib64 -L. -fstack-protector -rdynamic -Wl,-export-dynamic    -lruby2.1  -lpthread -ldl -lcrypt -lm   -lc
+
+make "DESTDIR=" install
+/usr/bin/mkdir -p . ./.gem.20180813-6614-1w1vj12/commonmarker
+exit > .RUBYARCHDIR.-.commonmarker.time
+/usr/bin/install -c -m 0755 commonmarker.so ./.gem.20180813-6614-1w1vj12/commonmarker

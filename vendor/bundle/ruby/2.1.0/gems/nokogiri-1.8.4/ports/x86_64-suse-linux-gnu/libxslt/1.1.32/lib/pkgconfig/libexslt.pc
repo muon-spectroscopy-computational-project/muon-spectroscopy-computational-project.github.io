@@ -1,0 +1,12 @@
+prefix=/home/wml08325/Desktop/MSCP/web/vendor/bundle/ruby/2.1.0/gems/nokogiri-1.8.4/ports/x86_64-suse-linux-gnu/libxslt/1.1.32
+exec_prefix=${prefix}
+libdir=/home/wml08325/Desktop/MSCP/web/vendor/bundle/ruby/2.1.0/gems/nokogiri-1.8.4/ports/x86_64-suse-linux-gnu/libxslt/1.1.32/lib
+includedir=${prefix}/include
+
+
+Name: libexslt
+Version: 0.8.20
+Description: EXSLT Extension library
+Requires: libxml-2.0
+Libs: -L${libdir} -lexslt -lxslt -L/home/wml08325/Desktop/MSCP/web/vendor/bundle/ruby/2.1.0/gems/nokogiri-1.8.4/ports/x86_64-suse-linux-gnu/libxml2/2.9.8/lib -lxml2 -L/lib64 -lz -lm -ldl -lm 
+Cflags: -I${includedir}
