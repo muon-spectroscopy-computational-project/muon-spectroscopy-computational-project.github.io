@@ -4,6 +4,8 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="chrome=1">
 
+    <title>{{ site.title }}</title>
+
 {% seo %}
 
     <link rel="stylesheet" href="{{ '/assets/css/style.css?v=' | append: site.github.build_revision | relative_url }}">
@@ -11,6 +13,9 @@
     <!--[if lt IE 9]>
     <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
     <![endif]-->
+
+    <!-- MathJax support -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-AMS-MML_HTMLorMML" type="text/javascript"></script>
   </head>
   <body>
     <div class="wrapper">
@@ -23,7 +28,7 @@
         {% endif %}
 
         {% if site.github.is_user_page %}
-          <p class="view"><a href="{{ site.github.owner_url }}">View My GitHub Profile</a></p>
+          <p class="view"><a href="{{ site.github.owner_url }}">View Organization on Github</a></p>
         {% endif %}
 
         {% if site.show_downloads %}
