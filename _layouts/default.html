@@ -23,6 +23,14 @@
         <h1><a href='index.html' >{{ site.title | default: site.github.repository_name }}</a></h1>
         <p>{{ site.description | default: site.github.project_tagline }}</p>
 
+        <p>
+          <h3><a href='people.html'>People</a></h3>
+          <h3><a href='pubs.html'>Publications</a></h3>
+          <h3><a href='tutorials.html'>Tutorials</a></h3>
+          <h3><a href='software.html'>Software</a></h3>
+          <h3><a href='muons.html'>The Life of μ</a></h3>
+        </p>
+
         {% if site.github.is_project_page %}
           <p class="view"><a href="{{ site.github.repository_url }}">View the Project on GitHub <small>{{ github_name }}</small></a></p>
         {% endif %}
