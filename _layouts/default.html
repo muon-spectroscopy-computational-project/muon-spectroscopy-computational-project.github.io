@@ -20,15 +20,15 @@
   <body>
     <div class="wrapper">
       <header>
-        <h1><a href='index.html' >{{ site.title | default: site.github.repository_name }}</a></h1>
+        <h1><a href="{{'index.html' | relative_url }}" >{{ site.title | default: site.github.repository_name }}</a></h1>
         <p>{{ site.description | default: site.github.project_tagline }}</p>
 
         <p>
-          <h3><a href='people.html'>People</a></h3>
-          <h3><a href='pubs.html'>Publications</a></h3>
-          <h3><a href='tutorials.html'>Tutorials</a></h3>
-          <h3><a href='software.html'>Software</a></h3>
-          <h3><a href='muons.html'>The Life of μ</a></h3>
+          <h3><a href="{{'people.html' | relative_url }}">People</a></h3>
+          <h3><a href="{{'pubs.html' | relative_url }}">Publications</a></h3>
+          <h3><a href="{{'tutorials.html' | relative_url }}">Tutorials</a></h3>
+          <h3><a href="{{'software.html' | relative_url }}">Software</a></h3>
+          <h3><a href="{{'muons.html' | relative_url }}">The Life of μ</a></h3>
         </p>
 
         {% if site.github.is_project_page %}

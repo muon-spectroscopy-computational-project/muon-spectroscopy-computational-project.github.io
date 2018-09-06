@@ -16,4 +16,4 @@ this could be a good point to start!
 
 #### Basics
 
-* [Installing `pymuon-suite`](/tutorial-folder/installing)
+* [Installing `pymuon-suite`](tutorial-folder/installing)

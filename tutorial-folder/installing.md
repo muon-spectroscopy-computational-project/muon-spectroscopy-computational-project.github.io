@@ -25,7 +25,7 @@ To check if your version of Python is working, first launch a terminal. This
 can be done on Linux and MacOS simply by finding the Terminal application in
 the launch menu. On Windows, if you have decided to use Anaconda, launch
 Anaconda Navigator from the menu, then
-[follow these instructions](/images/anacondanav.png) to launch a terminal.
+[follow these instructions](../images/anacondanav.png) to launch a terminal.
 
 Another useful tool to have installed on your system is `pip`. `pip` is a 
 package manager for Python, able to download from the internet and install 
