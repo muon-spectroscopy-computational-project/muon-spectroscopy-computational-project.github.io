@@ -17,3 +17,7 @@ this could be a good point to start!
 #### Basics
 
 * [Installing `pymuon-suite`](tutorial-folder/installing)
+
+#### Simulating Nuclear Quantum Effects
+
+* [Performing vibrational averaging calculations](tutorial-folder/vibrational)
