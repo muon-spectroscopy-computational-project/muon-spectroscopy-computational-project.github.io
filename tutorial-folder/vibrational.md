@@ -1,16 +1,55 @@
-### Vibrational averaging
+## Vibrational averaging
 
-#### What is vibrational averaging?
+### What is vibrational averaging?
 
-The term vibrational averaging refers to a set of methods used to approximate the effects of thermal and quantum motion of nuclei on the expectation values of properties of light atoms. These effects are highly significant for muonium. All methods involve calculating the phonon modes of a molecule and displacing the atoms along those modes. A grid of displacements is thus created for each atom desired. The desired property is then sampled at each point on the grid and averaged using some weighting. See this [paper by B. Monserrat](https://journals.aps.org/prb/abstract/10.1103/PhysRevB.93.014302) for more information.
+ Usually, the static lattice approximation is used in calculating properties of a system (e.g. in the ab initio DFT code CASTEP). This approximation assumes that all nuclei are static, classical objects whilst electrons have their quantum nature treated in full. However, for light nuclei in atoms such as muonium, quantum effects are highly important and neglecting them can produce inaccurate results. The term vibrational averaging refers to a set of methods used to approximate quantum effects on nuclei by "vibrating" the nuclei and averaging properties along those vibrations.
 
-`pymuon-suite` implements a general, high-level vibrational averaging function that can displace an atom in a molecule along its phonon modes and then average a quantity calculated at all displacement points with any chosen weighting. Multiple atoms can be selected, allowing this process to be repeated with whatever atoms you wish to displace. This allows it to easily be extended to use many vibrational averaging methods on many physical properties.
+These methods typically involve calculating the vibrational modes of a molecule and displacing the atoms along those modes. A grid of displacements is thus created for each atom. The desired property is then sampled at each point on the grid and averaged using some weighting. See this [paper by B. Monserrat](https://journals.aps.org/prb/abstract/10.1103/PhysRevB.93.014302) for more information.
 
-Currently, however, only the calculation of hyperfine coupling tensors with a harmonic oscillator wavefunction as the weighting is implemented. This treats the atoms as particles in a quantum harmonic oscillator and, as such, weights the values at grid points with the wavefunction of the harmonic oscillator.
+### The `pymuon-suite` implementation
 
-New capabilities can be implemented if you are familiar with Python and willing to implement new weighting generators and data parsers.
+`pm-nq`, the section of `pymuonsuite` relating to nuclear quantum effects, implements a general, high-level vibrational averaging function that can be extended to multiple methods and physical properties. The general workflow is as follows:
 
-It should be noted that `pymuon-suite` does not displace multiple atoms simultaneously, only one at a time. Then for each atom displaced it will generate an average of the property which will have varied for all atoms due to the displacement of that one atom.
+1. Calculate the phonon modes of a molecule or crystal using CASTEP or DFTB+
+2. Use `pm-nq` to write out a set of structure files in which atoms are displaced from their equilibrium positions along the phonon mode eigenvectors
+3. Calculate the value of the desired property at each displacement (also referred to as a grid point)
+4. Use `pm-nq` to calculate an average for the property over all displacements
+
+The following are the methods that are currently implemented and ready for use:
+
+#### Wavefunction sampling
+
+This method treats the muonium as an isolated particle in a 3-D harmonic oscillator. The muonium is displaced in `grid_n` increments along each of its 3 most significant phonon modes. Other atoms in the system are not displaced. The muonium can be treated like this due to its low mass relative to other chemical species, which means that its vibrations are effectively decoupled from the rest of the system. Multiple muons in the system can be selected to be displaced in this way, but they will be displaced in seperate 'runs' rather than all simultaneously. To clarify, this means that if 3 muons were selected, then 3 distinct averages could be generated, each differing from the static value due to the vibration of a single muon.
+
+The average over the displacements will be weighted by the wavefunction of the harmonic oscillator.
+
+#### Thermal lines
+
+The mean value theorem for integrals can be used to show that, for a particular configuration of displacements of atoms along the phonon modes of a system, the value of a given property is equal to its vibrational average. This configuration can be approximated to by averaging over a set of "thermal lines". See the paper linked at the top of the page for more details on the background theory of thermal lines.
+
+`pm-nq` generates a random set of thermal lines at T=0 (known as quantum points). These thermal lines each specify a set of displacements for a system, and averaging over the values calculated at each set of displacements produces an approximation to the vibrational average of a property. The more thermal lines are used, the more accurate the approximation. For each thermal line generated, its opposite is also calculated and put into the average. This cancels out odd terms in the Taylor expansion used to generate the thermal lines, increasing accuracy for relatively small computational cost.
+
+Increasing system size should not increase the number of sampling points required for a constant level of accuracy.
+
+### Using `pm-nq`
+
+If `pymuonsuite` has been installed (see tutorials section), then `pm-nq` can be called from the command line. The write mode will require a YAML-format parameter file for `pm-nq`, the format and options of which are described in the parameter file section below. A CASTEP .phonon file will also be required in the same directory as the cell file, or alternatively a parameter can be set which will use ASE and DFTB+ to calculate phonons instead. If a CASTEP .param file is specified in the parameter file, it will be copied so that each displaced cell file has a matching .param file. To call the write mode enter:
+
+```
+pm-nq "vib_avg" "<parameter_file>" -w
+```
+
+where `<parameter_file>` is the path of the parameter file. This will write out a set of CASTEP .cell files with atoms displaced according to the method used. 
+
+If the wavefunction sampling method is used, then `grid_n*3` files will be written, with the first third being displacements along the muon's first major phonon mode, the second third corresponding to the second mode and so forth. If the thermal lines method is used then `grid_n*2` files will be written, with the first half being the original randomly generated thermal lines, and the second half being their inverses.
+
+Once the displaced cell files have been generated, you must calculate the desired quantity for each cell file, keeping the resulting data files in the same directory as the displaced cell files. The read/average mode can then be called by removing the -w tag from the write mode call:
+
+```
+pm-nq "vib_avg" "<parameter_file>"
+```
+
+This will perform the appropriate average over the data files and produce a `<name>_tensors.dat` file with the averaged quantities, alongside other files depending on the method used and property averaged over.
 
 #### The parameter file
 
@@ -18,67 +57,51 @@ In order to use the vibrational averaging function, a YAML format parameter file
 
 **Mandatory Parameters**
 
-* cell_file: Path of CASTEP .cell file, or just the filename if in working directory.
+* cell_file: Path of CASTEP .cell file, or just the filename if in working directory. If using CASTEP phonons, the .phonon file must be in this directory also.
+
+* method: Method to be used. Currently accepted values:
+	* wavefunction (wavefunction sampling)
+	* thermal (thermal lines)
 
 * muon_symbol: Symbol used to represent the muon custom species in the .cell file.
 
-* atom_indices: An array of indices of the atoms to be vibrated, counting from 1. For example, for the first 3 atoms in the system, [1, 2, 3] would be input. Enter [-1] to select all atoms.
-
-* grid_n: Number of grid points to use along each phonon mode.
+* grid_n: Number of grid points to use along each phonon mode, or number of pairs of thermal lines to generate.
 
 * property: Property to be calculated. Currently accepted values: 
-	* hyperfine (hyperfine coupling tensors, rank matrix).
-
-* value_type: Rank of quantity being calculated. Accepted values: matrix, vector, scalar.
+	* hyperfine (hyperfine coupling tensors.)
+	* bandstructure (electronic band structure. output is currently quite messy.)
 
 **Optional Parameters**
 
 These parameters will be set to a default value if not given.
 
-* weight: Type of weighting to be used. Currently accepted values: 
-	* harmonic (harmonic oscillator wavefunction).
+* selection: Array specifying which muons to displace for the wavefunction sampling mode, counting muons from 0 in the order they are in in the cell file. E.g. To select the first and third muon in the atom list, enter [0, 2]. Enter [-1] to select all muons.
+
+  Default: [0]
+
+* weight: Type of weighting to be used. The thermal lines method will use a uniform weighting regardless. Currently accepted values: 
+	* harmonic (harmonic oscillator wavefunction for the wavefunction sampling method.)
  
   Default: harmonic.
 
-* param_file: Path of CASTEP .param file, which will be copied into the new file structure with the displaced cell files if specified. Default: None.
+* param_file: Path of CASTEP .param file, which will be copied with the displaced cell files if specified. 
 
-* numerical_solver: If True, solve the Schroedinger equation numerically if QLab is installed. Otherwise, solve analytically. Default: False.
+  Default: None.
 
-* ase_phonons: If True, calculate phonon modes of the system using ASE and CASTEP. Otherwise, read in phonons from .phonon file in same directory as .cell file. Default: False.
+* ase_phonons: If True, calculate phonon modes of the system using ASE and DFTB+. Otherwise, read in phonons from .phonon file in same directory as .cell file. The system will first be geometry optimized using DFTB+, then its phonons will be calculated at this DFTB+ relaxed point, to ensure forces are zero. The phonon modes will then be used to displace atoms based on the input CASTEP cell file positons. This is very quick compared to CASTEP phonon calculation but is also less accurate. It will produce orthogonal phonon mode eigenvectors pointing in the right direction and eigenfrequencies of the correct order of magnitude, which renders it a good approximation for wavefunction sampling. However, this is untested with thermal lines and may not work!
 
-* dftb_phonons: If True, and ase\_phonons is also True, ASE will calculate phonon modes using DFTB+ rather than CASTEP. This is much quicker but also less accurate. Brief testing has shown this to agree well with CASTEP on the direction of phonon modes and agree to within an order of magnitude for large phonon frequencies. Default: True.
+  Default: False.
 
 **Example Parameter File**
 
 ```
 cell_file: muon_benzene.cell
+param_file: muon_benzene.param
+method: wavefunction
 muon_symbol: H:1
-atom_indices:[1, 2, 5, 49]
+atom_indices:[0]
 grid_n: 20
 property: hyperfine
-value_type: matrix
 weight: harmonic
-param_file: muon_benzene.param
 ```
-
-#### Using `pymuon-suite`'s vibrational averaging function
-
-If `pymuon-suite` has been installed, the vibrational averaging function can be called through the command line using the command `pm-nq "vib_avg" "<parameter file>" -w`, where `<parameter file>` should be replaced with the path of the YAML file made earlier. The `-w` flag appended to the end of the command activates the write mode, removing it activates the averaging mode.
-
-The first step is to use `pymuon-suite`'s write mode to generate a set of cell files with the selected atoms displaced along their 3 major phonon modes. This requires a CASTEP cell file and the system's phonon modes. The phonon modes can be taken from a seperate CASTEP phonon calculation. The .phonon file should have the same name as the .cell file, e.g. "muon_benzene.cell" and "muon\_benzene.phonon". Alternatively, `pymuon-suite` can use ASE to calculate the modes when it is called if the ase\_phonons parameter is set to True.
-
-The new cell files will be split up into a file structure with a folder for each atom displaced, each containing subfolders for the modes of the respective atom which are further subdivided into folders for each grid point along that mode, like so:
-
-```
-top folder/
-	  atom/
-	      mode/
-		  grid point/
-			    molecule.cell
-			    molecule.param
-```
-
-You will then need to calculate the desired property at each grid point, making sure the resulting data file is kept in the same folder as the grid point's cell file. Unfortunately, `pymuon-suite` can not yet do this automatically so you will have to write a script to set off all of the calculations.
-
-After the property data at each grid point has been obtained, `pymuon-suite`'s averaging mode can be used to average this data. To do this, call the function as before but remove the `-w` flag. This will produce a file containing the averaged tensors of the calculated property for every atom in the system, under top\_folder/atom/molecule_tensors.dat. Additional information on the calculation may be produced and other important information depending on the property calculated. For example, if the hyperfine property is calculated then a hyperfine report will be produced detailing the hyperfine coupling constant and dipolar hyperfine components for the atom displaced and its nearest hydrogen atom (ipso hydrogen).
 
