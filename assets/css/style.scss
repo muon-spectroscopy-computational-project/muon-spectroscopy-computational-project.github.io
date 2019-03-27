@@ -2,7 +2,7 @@
 ---
 @import "{{ site.theme }}";
 
-p a:hover {
+p a:hover, li a:hover {
     color: #389FDA;
     font-weight: normal;
 }
