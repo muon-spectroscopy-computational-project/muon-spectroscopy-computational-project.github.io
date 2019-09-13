@@ -10,4 +10,3 @@
 
 ### Other affiliations
 
-* **Ben Huddart** (Durham University)
