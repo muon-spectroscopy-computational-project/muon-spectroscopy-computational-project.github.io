@@ -21,3 +21,5 @@ this could be a good point to start!
 #### Simulating Nuclear Quantum Effects
 
 * [Performing vibrational averaging calculations](tutorial-folder/vibrational)
+
+#### Finding the Muon Stopping Site
