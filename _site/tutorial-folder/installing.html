@@ -16,11 +16,11 @@
 <meta property="og:url" content="http://localhost:4000/tutorial-folder/installing.html" />
 <meta property="og:site_name" content="The Muon Spectroscopy Computational Project" />
 <script type="application/ld+json">
-{"description":"Software and methods to make the muon spectroscopist’s life easier","publisher":null,"image":null,"@type":"WebPage","headline":"Installing pymuon-suite and preparing the Python environment","dateModified":null,"datePublished":null,"sameAs":null,"mainEntityOfPage":null,"url":"http://localhost:4000/tutorial-folder/installing.html","name":null,"author":null,"@context":"http://schema.org"}</script>
+{"@type":"WebPage","publisher":null,"url":"http://localhost:4000/tutorial-folder/installing.html","image":null,"name":null,"headline":"Installing pymuon-suite and preparing the Python environment","dateModified":null,"datePublished":null,"sameAs":null,"description":"Software and methods to make the muon spectroscopist’s life easier","author":null,"mainEntityOfPage":null,"@context":"http://schema.org"}</script>
 <!-- End Jekyll SEO tag -->
 
 
-    <link rel="stylesheet" href="/assets/css/style.css?v=91c79686af67482e6910d3fb827d4bbc66f4bdda">
+    <link rel="stylesheet" href="/assets/css/style.css?v=bdb0c5f7a9827e4e68fa56c0a6505c695fd46645">
     <meta name="viewport" content="width=device-width">
     <!--[if lt IE 9]>
     <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
@@ -134,13 +134,8 @@ and unzip it in a folder of your choice.</p>
 
 <h4 id="dependencies">Dependencies</h4>
 
-<p><code class="highlighter-rouge">pip</code> will take care of installing most of the dependencies (other packages
-that <code class="highlighter-rouge">pymuon-suite</code> needs to run), but one of them isn’t available yet on the
-Python Package Index. This is <code class="highlighter-rouge">parse-fmt</code>, which is used in the Unperturbed
-Electrostatic Potential methods. You can clone it with <code class="highlighter-rouge">git</code> or download it as
-a zip file as seen above, taking the corresponding URLs from <a href="https://github.com/CCP-NC/parse-fmt">its GitHub 
-repository</a>. It is installed using the
-same procedure as <code class="highlighter-rouge">pymuon-suite</code>.</p>
+<p><code class="highlighter-rouge">pip</code> will take care of installing all of the dependencies (other packages
+that <code class="highlighter-rouge">pymuon-suite</code> needs to run). Just follow the instructions below.</p>
 
 <h4 id="installation">Installation</h4>
 
@@ -155,16 +150,12 @@ Once you are in the directory <em>above</em> the unzipped/cloned package, you ca
 </code></pre></div></div>
 
 <p>where <code class="highlighter-rouge">{package}</code> represents the name of the directory where you unzipped/cloned
-the package. Do this for <code class="highlighter-rouge">parse-fmt</code> first and for <code class="highlighter-rouge">pymuon-suite</code> later. The
-order is important! If <code class="highlighter-rouge">parse-fmt</code> is missing, the installation of <code class="highlighter-rouge">pymuon-suite</code>
-will fail. On Linux you can also avoid this problem by simply using 
-GNU Make, by entering the folder in which <code class="highlighter-rouge">pymuon-suite</code> is unzipped (there
-should be a <code class="highlighter-rouge">Makefile</code>) and running:</p>
+the package. In your case, if you didn’t rename the unzipped directory, it should be:</p>
 
-<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>make install-all
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>pip install ./pymuon-suite <span class="nt">--user</span>
 </code></pre></div></div>
 
-<p>which will download and install <code class="highlighter-rouge">parse-fmt</code> as well.</p>
+<p>and you’ll be ready to go.</p>
 
 
 

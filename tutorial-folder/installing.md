@@ -75,13 +75,8 @@ and unzip it in a folder of your choice.
 
 #### Dependencies
 
-`pip` will take care of installing most of the dependencies (other packages
-that `pymuon-suite` needs to run), but one of them isn't available yet on the
-Python Package Index. This is `parse-fmt`, which is used in the Unperturbed
-Electrostatic Potential methods. You can clone it with `git` or download it as
-a zip file as seen above, taking the corresponding URLs from [its GitHub 
-repository](https://github.com/CCP-NC/parse-fmt). It is installed using the
-same procedure as `pymuon-suite`.
+`pip` will take care of installing all of the dependencies (other packages
+that `pymuon-suite` needs to run). Just follow the instructions below.
 
 #### Installation
 
@@ -97,16 +92,12 @@ pip install ./{package} --user
 ```
 
 where `{package}` represents the name of the directory where you unzipped/cloned
-the package. Do this for `parse-fmt` first and for `pymuon-suite` later. The
-order is important! If `parse-fmt` is missing, the installation of `pymuon-suite`
-will fail. On Linux you can also avoid this problem by simply using 
-GNU Make, by entering the folder in which `pymuon-suite` is unzipped (there
-should be a `Makefile`) and running:
+the package. In your case, if you didn't rename the unzipped directory, it should be:
 
 ```bash
-make install-all
+pip install ./pymuon-suite --user
 ```
 
-which will download and install `parse-fmt` as well.
+and you'll be ready to go.
 
 
