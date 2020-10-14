@@ -16,6 +16,9 @@ Expanding on our previous use of AIRSS to find the muon stopping site, this pape
 **_J. Phys. Chem. C, 124, 18, 9656–9664, (2020)_**
 Phenylacetylene-capped silicon nanoparticles have attracted interest as a novel thermoelectric material. In this paper, we report a combined muon spectroscopic (μSR) and computational study of this material in solution to investigate the microscopic electronic structure of this system.
 
+* [Computational prediction of muon stopping sites: A novel take on the unperturbed electrostatic potential method](https://aip.scitation.org/doi/10.1063/5.0012381)\\
+**_The Journal of Chemical Physics, 153, 044111 (2020)_**
+In this work, we present a software implementation of the Unperturbed Electrostatic Potential (UEP) Method: an approach used for finding the muon stopping site in crystalline materials. The UEP method requires only one DFT calculation, necessary to compute the electronic density of the host material. 
 
 
 ### Presentations
