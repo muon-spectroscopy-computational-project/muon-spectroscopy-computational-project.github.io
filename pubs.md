@@ -12,6 +12,12 @@ The stopping site of the muon in a muon-spin relaxation experiment (mu+SR) is ge
 **_The Journal of Chemical Physics, 150, 154301, (2019)_**
 Expanding on our previous use of AIRSS to find the muon stopping site, this paper focuses on its application to organic molecules and shows how the tight binding software DFTB+, combined with the `3ob-3-1` parameter set, can produce satisfying results for it in a fraction of the time required by DFT simulations.
 
+* [A Muon Spectroscopic and Computational Study of the Microscopic Electronic Structure in Thermoelectric Hybrid Silicon Nanostructures](https://pubs.acs.org/doi/abs/10.1021/acs.jpcc.9b11717)\\
+**_J. Phys. Chem. C, 124, 18, 9656–9664, (2020)_**
+Phenylacetylene-capped silicon nanoparticles have attracted interest as a novel thermoelectric material. In this paper, we report a combined muon spectroscopic (μSR) and computational study of this material in solution to investigate the microscopic electronic structure of this system.
+
+
+
 ### Presentations
 
 * [Computational Prediction of Muon Stopping Sites in Silicon](https://leandro-liborio.github.io/files/MuSR2017.pdf)\\
