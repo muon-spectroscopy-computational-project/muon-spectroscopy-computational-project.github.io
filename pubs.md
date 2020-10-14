@@ -1,15 +1,15 @@
 ### Publications
 
 * [Exploring the Temperature Dependent Solid-State ALC Spectrum of the C6H6Mu• Radical with Ab-Initio Simulation Techniques](https://journals.jps.jp/doi/pdf/10.7566/JPSCP.21.011036)\\
-**_JPS Conf. Proc. 21, 011036 (2018)_**\\
+**_JPS Conf. Proc. 21, 011036, (2018)_**\\
 In this work, we used a number of different computational techniques to study the temperature dependence of the Avoided Level Crossing spectrum of crystalline benzene.
 
 * [Computational Prediction of Muon Stopping Sites Using AIRSS](https://aip.scitation.org/doi/pdf/10.1063/1.5024450 )\\
-  **_The Journal of Chemical Physics, 148, 134114 (2018)_**\\
+  **_The Journal of Chemical Physics, 148, 134114, (2018)_**\\
 The stopping site of the muon in a muon-spin relaxation experiment (mu+SR) is generally unknown and there few techniques that can be used to determine the muon stopping site. In this work, we propose a purely theoretical method that can be used to predict muon stopping sites in crystalline materials using only computer simulations.
 
-* [Comparison between Density Functional Theory and Density Functional Tight Binding approaches for finding the muon stopping site in organic molecular crystals](https://arxiv.org/abs/1812.02999)\\
-**_The Journal of Chemical Physics (approved)_**
+* [Comparison between Density Functional Theory and Density Functional Tight Binding approaches for finding the muon stopping site in organic molecular crystals](https://aip.scitation.org/doi/10.1063/1.5085197)\\
+**_The Journal of Chemical Physics, 150, 154301, (2019)_**
 Expanding on our previous use of AIRSS to find the muon stopping site, this paper focuses on its application to organic molecules and shows how the tight binding software DFTB+, combined with the `3ob-3-1` parameter set, can produce satisfying results for it in a fraction of the time required by DFT simulations.
 
 ### Presentations
