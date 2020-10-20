@@ -1,8 +1,6 @@
-### Vibrational averaging
+### The Unperturbed Electrostatic Potential method
 
-#### What is vibrational averaging?
-
-The term vibrational averaging refers to a set of methods used to approximate the effects of thermal and quantum motion of nuclei on the expectation values of properties of light atoms. These effects are highly significant for muonium. All methods involve calculating the phonon modes of a molecule and displacing the atoms along those modes. A grid of displacements is thus created for each atom desired. The desired property is then sampled at each point on the grid and averaged using some weighting. See this [paper by B. Monserrat](https://journals.aps.org/prb/abstract/10.1103/PhysRevB.93.014302) for more information.
+Here we present our software implementation of the Unperturbed Electrostatic Potential (UEP) Method: a method that requires only one DFT calculation, which is used to compute the electronic density of the host material. This, in turn, is used to calculate the minima of the host material’s electrostatic potential and to estimate the muon stopping site, relying on the approximation that the muon’s presence does not significantly affect its surroundings. One of the main UEP’s assumptions is that the muon stopping site will be one of the crystalline material’s electrostatic potential minima. 
 
 `pymuon-suite` implements a general, high-level vibrational averaging function that can displace an atom in a molecule along its phonon modes and then average a quantity calculated at all displacement points with any chosen weighting. Multiple atoms can be selected, allowing this process to be repeated with whatever atoms you wish to displace. This allows it to easily be extended to use many vibrational averaging methods on many physical properties.
 
@@ -31,22 +29,7 @@ In order to use the vibrational averaging function, a YAML format parameter file
 
 * value_type: Rank of quantity being calculated. Accepted values: matrix, vector, scalar.
 
-**Optional Parameters**
 
-These parameters will be set to a default value if not given.
-
-* weight: Type of weighting to be used. Currently accepted values: 
-	* harmonic (harmonic oscillator wavefunction).
- 
-  Default: harmonic.
-
-* param_file: Path of CASTEP .param file, which will be copied into the new file structure with the displaced cell files if specified. Default: None.
-
-* numerical_solver: If True, solve the Schroedinger equation numerically if QLab is installed. Otherwise, solve analytically. Default: False.
-
-* ase_phonons: If True, calculate phonon modes of the system using ASE and CASTEP. Otherwise, read in phonons from .phonon file in same directory as .cell file. Default: False.
-
-* dftb_phonons: If True, and ase\_phonons is also True, ASE will calculate phonon modes using DFTB+ rather than CASTEP. This is much quicker but also less accurate. Brief testing has shown this to agree well with CASTEP on the direction of phonon modes and agree to within an order of magnitude for large phonon frequencies. Default: True.
 
 **Example Parameter File**
 
