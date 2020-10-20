@@ -8,6 +8,17 @@ A detailed description of the methodology is given in this [paper by S. Sturniol
 
 #### Details of the software implementation
 
+Both the symmetry analysis and the UEP implementation can be found in a Python library we deployed specifically to aid muon computational science: `pymuon-suite`. The library can be found on Github and is released under a GNU v3.0 open source license. 
+
+Once installed, `pymuon-suite` provides the user both with a Python API to use for custom programs and with a series of pre-packaged scripts that perform the most common operations. Four of these scripts are relevant for finding the muon stopping site using the UEP method:
+	
+`pm-symmetry` performs the symmetry analysis;
+	
+`pm-uep-opt` performs an optimization of the muon position under the unperturbed electrostatic potential;
+ 	
+`pm-uep-plot` produces 1D and 2D files describing the UEP along paths or on specified planes useful to produce plots; and
+	
+`pm-muairss` produces batches of structure files with a muon defect added following a Poisson random distribution and analyses and clusters the results of their optimization.
 
 
 `pymuon-suite` implements a general, high-level vibrational averaging function that can displace an atom in a molecule along its phonon modes and then average a quantity calculated at all displacement points with any chosen weighting. Multiple atoms can be selected, allowing this process to be repeated with whatever atoms you wish to displace. This allows it to easily be extended to use many vibrational averaging methods on many physical properties.
