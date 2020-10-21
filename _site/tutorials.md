@@ -23,3 +23,5 @@ this could be a good point to start!
 * [Performing vibrational averaging calculations](tutorial-folder/vibrational)
 
 #### Finding the Muon Stopping Site
+
+* [The Unperturbed Electrostatic Potential method](tutorial-folder/UEP)
