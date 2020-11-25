@@ -7,3 +7,6 @@ Moreover, as part of the ALC project, we organized the 2020 edition of the [Muon
 The development of computational methods for modelling muon spin relaxation (μSR) experiments has been a key theme within the muon community in recent years. Facility instrument scientists are receiving an increasing number of enquiries on how these computer tools might be accessed, but at present they require specialised knowledge for their use. 
 
 The figure below shows a schematic picture that describes the proposed high-level software architecture that underpins the Ada Lovelace Project on Muon Spectroscopy.  The picture shows how the existing software components, and the ones that will be developed in this project, are going to be integrated: 
+
+
+![Ada Lovelace Project on Muon Spectroscopy](https://github.com/muon-spectroscopy-computational-project/muon-spectroscopy-computational-project.github.io/blob/master/images/ALC-Scheme.jpg)
