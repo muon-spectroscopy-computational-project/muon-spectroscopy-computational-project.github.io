@@ -20,6 +20,9 @@ theory);
 * Estimation of quantum effects involving the muon and their effect on
 stopping site stability and spectral dynamics;
 
+* Prediction of frequencies and probabilities of transition between energy levels of muonic atoms. This is a tool that helps
+with the interpretation of muonic X-ray spectra for elemental analysis.
+
 * Integration of multiple computational tools to create a simplified pipeline
 from low level theory to experiment simulation.
 
