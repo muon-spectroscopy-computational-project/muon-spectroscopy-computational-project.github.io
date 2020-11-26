@@ -32,3 +32,13 @@ DEFAULT: 1.884E-28 TYPE: float;
 
 * **save_pickle:** If True,save the output result in a pickled file for further reading and reusing with other Python scripts. DEFAULT: true TYPE: boolean.
  
+#### Unperturbed electrostatic potential plotting: `pm-uep-plot`
+
+Here are listed all the keywords used to run the `pm-uep-plot` script, used for plotting the unperturbed electrostatic potential along directions and planes in the unit cell. We omit explaining the key- words chden_path, chden_seed, and gw_factor, which are in common with pm-uep-opt 
+
+
+
+
+
+
+
