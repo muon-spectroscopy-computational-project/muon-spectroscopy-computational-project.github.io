@@ -20,6 +20,26 @@ Once installed, `pymuon-suite` provides the user both with a Python API to use f
 	
 `pm-muairss` produces batches of structure files with a muon defect added following a Poisson random distribution and analyses and clusters the results of their optimization.
 
+The symmetry script can be run simply by executing the command:
+
+`pm-symmetry` `<structure file>`
+
+where the structure file has to be any supported crystallographic file format (such as .cif or .cell).  
+
+For the UEP scripts, parameter files in the YAML format are necessary. These scripts are run with the commands: 
+
+`pm-uep-plot` `<parameters file>` 
+
+`pm-uep-opt` `<parameters file>`
+	
+Finally, pm-muairss has both a “write” and a “read” mode: one to create the batches of structure files with a muon defect, and the other to interpret the results of their optimization. It also needs both a structure and a parameter YAML file as inputs. To avoid mistakenly overwriting important data, the default mode is read. The two modes are used as follows:
+
+`pm-muairss` `-t` `w` `<structure file>` `<parameters file>` # To write 
+
+`pm-muairss` `-t` `r` `<structure file>` `<parameters file>` # To read
+
+The `-t` `r` argument is optional; if omitted, read mode is assumed. For the parameter files, each script has its own arguments that can be set using them. A detailed description of the specific accepted parameters for the YAML files, and their meaning for each script, is provided in [this document](https://github.com/muon-spectroscopy-computational-project/muon-spectroscopy-computational-project.github.io/blob/master/tutorial-folder/YAMLparameters.md).
+
 #### The parameter file
 
 In order to use the vibrational averaging function, a YAML format parameter file must be created. The YAML format in this case is simply a set of entries, each on its own line, given by a parameter-value pair which are seperated by a colon. The list of required parameters is given below along with an example file.
