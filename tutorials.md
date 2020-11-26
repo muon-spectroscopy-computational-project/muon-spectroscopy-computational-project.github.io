@@ -25,3 +25,8 @@ this could be a good point to start!
 #### Finding the Muon Stopping Site
 
 * [The Unperturbed Electrostatic Potential method](tutorial-folder/UEP)
+
+#### Negative Muons 
+* [Prediction of frequencies and probabilities of transition between energy levels of muonic atoms](tutorial-folder/muDirac)
+
+
