@@ -50,6 +50,24 @@ Here are listed all the keywords used to run the `pm-uep-plot` script, used for 
   * three atom indices to act as corners, points along width, and points along height, for example, \[0, 1, 2, 20, 20\] would produce a parallelogram
     having the vector connecting atoms 0 and 1 as base, the vector connecting atoms 0 and 2 as side, and 20 points along each side for a 20 × 20 overall grid.
 
+#### Random structure generation: `pm-muairss`
+
+Here are listed all the keywords used to run the `pm-muairss` script. Words that are relevant to usage with CASTEP or DFTB+ for structure optimization are included too.  
+
+* **name:** name to call the folder for containing each struc- ture. This name will be postfixed with a unique number, e.g., struct_001. DEFAULT: struct TYPE: string;
+
+* **calculator:** calculator(s) used to optimize the muon position. Must be a comma-separated list of values. Currently supported calculators are CASTEP, DFTB+, and UEP. Can also pass ALL as an option to generate files for all calculators. DEFAULT: dftb+ TYPE: string;
+
+* **poisson_r:** radius in Å for generating muon sites with the Poisson disk algorithm. This radius is the minimum distance at which two muons can be placed from each other when the muonated structures are generated. DEFAULT: 0.8 TYPE: float;
+
+* **uep_chden:** CASTEP charge density file. seed.den_fmt. DEFAULT: NONE TYPE: string;
+
+* **uep_gw_factor:** Gaussian width factor used to define the size of the ionic charges by scaling the pseudopotential radius. DEFAULT: 5.0 TYPE: float;
+
+* **vdw_scale:** scale factor to multiply the standard van der Waals radius of each atom in the system, used to determine the minimum distance allowed between a muon and other atoms. Bigger values will evacuate a larger sphere around the existing atoms. DEFAULT: 0.5 TYPE: float;
+
+* **charged:** determines whether the implanted muons will be charged or neutral. Must be True to use UEP. DEFAULT: false TYPE: boolean;
+
 
 
 
