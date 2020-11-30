@@ -10,10 +10,10 @@ Here are listed all the keywords used to run the `pm-uep-opt` script, used for o
 the unperturbed electrostatic potential approximation.
 
 * **chden_path:** path of the folder in which the charge density file produced by a CASTEP calculation (extension.den_fmt) to use
-for the UEP can be found. DEFAULT:. TYPE: string;
+for the UEP can be found. DEFAULT:./ TYPE: string;
 
 * **chden_seed:** seedname of the charge density file produced by a CASTEP calculation (extension .den_fmt) to use for the
-UEP. In combination with the previous keyword, the file willbesearchedas<chden_path>/<chden_seed>.den_fmt. DEFAULT: NONE TYPE: string;
+UEP. In combination with the previous keyword, the file will be searched as <chden_path>/<chden_seed>.den_fmt. DEFAULT: NONE TYPE: string;
 
 * **gw_factor:** Gaussian width factor used to define the size of the ionic charges by scaling the pseudopotential radius.
  DEFAULT: 5.0 TYPE: float;
@@ -60,7 +60,7 @@ Here are listed all the keywords used to run the `pm-muairss` script. Words that
 
 * **poisson_r:** radius in Å for generating muon sites with the Poisson disk algorithm. This radius is the minimum distance at which two muons can be placed from each other when the muonated structures are generated. DEFAULT: 0.8 TYPE: float;
 
-* **uep_chden:** CASTEP charge density file. seed.den_fmt. DEFAULT: NONE TYPE: string;
+* **uep_chden:** CASTEP charge density file: <seed>.den_fmt. DEFAULT: NONE TYPE: string;
 
 * **uep_gw_factor:** Gaussian width factor used to define the size of the ionic charges by scaling the pseudopotential radius. DEFAULT: 5.0 TYPE: float;
 
@@ -78,13 +78,13 @@ Here are listed all the keywords used to run the `pm-muairss` script. Words that
 
 * **clustering_method:** clustering method to use to process results. The options are `hier` (for hierarchical clustering) and `kmeans` (for k-means clustering). DEFAULT: hier TYPE: string;
 
-* **clustering_hier_t:** normalized `t` parameter for hierarchical clustering. Higher `t` will produce a smaller number of bigger clusters. DEFAULT: 0.3 TYPE: float;
+* **clustering_hier_t:** normalized **t** parameter for hierarchical clustering. Higher **t** will produce a smaller number of bigger clusters. DEFAULT: 0.3 TYPE: float;
 
 * **clustering_kmeans_k:** expected number of clusters for k-means clustering. DEFAULT: 4 TYPE: int;
 
 * **clustering_save_min:** If True, save the minimum energy structure for each cluster as a separate file. DEFAULT: false TYPE: boolean;
 
-* **clustering_save_format:** extension of file format in which to save the minimum energy structures if `clustering_save_min` is True. DEFAULT: .cif TYPE: string;
+* **clustering_save_format:** extension of file format in which to save the minimum energy structures if **clustering_save_min** is True. DEFAULT: .cif TYPE: string;
 
 * **castep_command:** command used to run the CASTEP executable on the system. DEFAULT: castep.serial TYPE: string;
 
