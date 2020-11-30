@@ -54,7 +54,7 @@ mode.
 The clusters with the largest number of muons will then roughly correspond to the minima of the electrostatic potential, 
 with have the largest attraction basin and are likely to be representing a muon stopping site in that host material.
 
-This document presents a detailed example of how to estimate the muon stopping sites in an iron oxide. 
+This [document](supplement.pdf) presents a detailed example of how to estimate the muon stopping sites in an iron oxide. 
 
 #### Examples of application of the UEP method
 
