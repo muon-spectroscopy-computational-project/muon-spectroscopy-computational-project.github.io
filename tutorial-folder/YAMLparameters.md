@@ -36,7 +36,19 @@ DEFAULT: 1.884E-28 TYPE: float;
 
 Here are listed all the keywords used to run the `pm-uep-plot` script, used for plotting the unperturbed electrostatic potential along directions and planes in the unit cell. We omit explaining the key- words chden_path, chden_seed, and gw_factor, which are in common with pm-uep-opt 
 
-
+* **line_plots:** specify one or more line segments along which to plot the value of the UEP. Each line segment is specified by a list, and there are a number of possible methods to specify them:
+  * crystallographic direction, starting point, length, and number of points. For example, \[\[1, 1, 0\], \[0, 0, 0\], 10, 100\]
+    will produce a plot along the \[110\] direction, starting from the origin, continuing for 10 Å and with 100 points spaced 0.1 Å each;
+  * starting point, end point, and number of points. For example, \[\[0, 0, 0\], \[1, 1, 1\], 100\] will produce a plot sampling the vector 
+    connecting the origin with the position \[1, 1, 1\] Å in the cell (these are absolute positions), with a grid of 100 points;
+  * starting atom, end atom, and number of points. For example, \[1, 2, 20\] will produce a plot sampling the line connecting the
+    atoms with indices 1 and 2 in the structure file, split in 20 points.
+    
+* **plane_plots:** specify one or more planes along which to plot the value of the UEP. Each plane is specified by a list, and there are a number of       possible methods to specify them:
+  * three corners, points along width, and points along height. For example, \[\[0, 0, 0\], \[3, 0, 0\], \[0, 0, 3\], 20, 20\] in a cubic lattice 
+    with *a = 3* would produce a plot of the *xz* face of the cell, split into a 20 × 20 grid,
+  * three atom indices to act as corners, points along width, and points along height, for example, \[0, 1, 2, 20, 20\] would produce a parallelogram
+    having the vector connecting atoms 0 and 1 as base, the vector connecting atoms 0 and 2 as side, and 20 points along each side for a 20 × 20 overall grid.
 
 
 
