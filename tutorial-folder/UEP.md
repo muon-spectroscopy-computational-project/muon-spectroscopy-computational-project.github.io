@@ -1,4 +1,4 @@
-### The Unperturbed Electrostatic Potential method
+## The Unperturbed Electrostatic Potential method
 
 Here we present our software implementation of the Unperturbed Electrostatic Potential (UEP) Method: a method that requires only one DFT calculation, which is used to compute the electronic density of the host material. This, in turn, is used to calculate the minima of the host material’s electrostatic potential and to estimate the muon stopping site, relying on the approximation that the muon’s presence does not significantly affect its surroundings. 
 
@@ -6,7 +6,7 @@ The software has a complementary tool, which evaluates the interstitial high-sym
 
 A detailed description of the methodology is given in this [paper by S. Sturniolo and L. Liborio](https://aip.scitation.org/doi/10.1063/5.0012381). 
 
-#### Details of the software implementation
+### Details of the software implementation
 
 Both the symmetry analysis and the UEP implementation can be found in a Python library we deployed specifically to aid muon computational science: `pymuon-suite`. The library can be found on Github and is released under a GNU v3.0 open source license. 
 
@@ -54,9 +54,18 @@ mode.
 The clusters with the largest number of muons will then roughly correspond to the minima of the electrostatic potential, 
 with have the largest attraction basin and are likely to be representing a muon stopping site in that host material.
 
-#### Examples of application of the UEP method
+### Examples of application of the UEP method
 
-### Magnetite (Fe<sub>3</sub>O<sub>4</sub>)
+#### Magnetite (Fe<sub>3</sub>O<sub>4</sub>)
+
+Potential muon stopping sites in Fe<sub>3</sub>O<sub>4</sub> magnetite are  experimentally well known.  The stopping sites are:
+
+* located within a planar region that is perpendicular to the (111) direction in the unit cell and
+* situated within ≈1.5 Å of one of the oxygen atoms defining the planar region. 
+
+Figures (4) and (5) show the O(111) site predicted by the UEP method. An example of a planar region perpendicular to the (111) direction is indicated in yellow. The muon is located at ≈1.3 Å from its closest oxygen atom in the planar region.
+
+
 
 This [document](supplement.pdf) presents a detailed example of how to estimate the muon stopping sites in an iron oxide. 
 
