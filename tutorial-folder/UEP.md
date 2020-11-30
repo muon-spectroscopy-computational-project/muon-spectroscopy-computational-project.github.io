@@ -56,7 +56,7 @@ with have the largest attraction basin and are likely to be representing a muon 
 
 #### Examples of application of the UEP method
 
-### Magnetite $$e=mc^2$$,
+### Magnetite (Fe<sub>3</sub>O<sub>4</sub>)
 
 This [document](supplement.pdf) presents a detailed example of how to estimate the muon stopping sites in an iron oxide. 
 
