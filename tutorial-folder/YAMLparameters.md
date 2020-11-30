@@ -68,6 +68,28 @@ Here are listed all the keywords used to run the `pm-muairss` script. Words that
 
 * **charged:** determines whether the implanted muons will be charged or neutral. Must be True to use UEP. DEFAULT: false TYPE: boolean;
 
+* **supercell:** supercell size and shape to use. This can either be a single int, a list of three integers, or a 3 × 3 matrix of integers. For a single number, a diagonal matrix will be generated with the integer repeated on the diagonals. For a list of three numbers, a diagonal matrix will be generated where the diagonal elements are set to the list. A matrix will be used directly as is. Default is a 3 × 3 identity matrix. DEFAULT: identity TYPE: matrix;
+
+* **out_folder:** name for the output folder used to store the structural input files generated. DEFAULT:./muon-airss-out TYPE: string;
+
+* **geom_steps:** maximum number of geometry optimization steps. DEFAULT: 30 TYPE: int;
+
+* **geom_force_tol:** force tolerance for each geometry optimization in eV/Å. DEFAULT: 0.05 TYPE: float;
+
+* **clustering_method:** clustering method to use to process results. The options are `hier` (for hierarchical clustering) and `kmeans` (for k-means clustering). DEFAULT: hier TYPE: string;
+
+* **clustering_hier_t:** normalized `t` parameter for hierarchical clustering. Higher `t` will produce a smaller number of bigger clusters. DEFAULT: 0.3 TYPE: float;
+
+* **clustering_kmeans_k:** expected number of clusters for k-means clustering. DEFAULT: 4 TYPE: int;
+
+* **clustering_save_min:** If True, save the minimum energy structure for each cluster as a separate file. DEFAULT: false TYPE: boolean;
+
+* **clustering_save_format:** extension of file format in which to save the minimum energy structures if `clustering_save_min` is True. DEFAULT: .cif TYPE: string;
+
+* **castep_command:** command used to run the CASTEP executable on the system. DEFAULT: castep.serial TYPE: string;
+
+* **dftb_command:** command used to run the DFTB+ executable on the system. DEFAULT: dftb+ TYPE: string;
+
 
 
 
