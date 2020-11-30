@@ -37,16 +37,21 @@ DEFAULT: 1.884E-28 TYPE: float;
 Here are listed all the keywords used to run the `pm-uep-plot` script, used for plotting the unperturbed electrostatic potential along directions and planes in the unit cell. We omit explaining the key- words chden_path, chden_seed, and gw_factor, which are in common with pm-uep-opt 
 
 * **line_plots:** specify one or more line segments along which to plot the value of the UEP. Each line segment is specified by a list, and there are a number of possible methods to specify them:
+
   * crystallographic direction, starting point, length, and number of points. For example, \[\[1, 1, 0\], \[0, 0, 0\], 10, 100\]
     will produce a plot along the \[110\] direction, starting from the origin, continuing for 10 Å and with 100 points spaced 0.1 Å each;
+    
   * starting point, end point, and number of points. For example, \[\[0, 0, 0\], \[1, 1, 1\], 100\] will produce a plot sampling the vector 
     connecting the origin with the position \[1, 1, 1\] Å in the cell (these are absolute positions), with a grid of 100 points;
+    
   * starting atom, end atom, and number of points. For example, \[1, 2, 20\] will produce a plot sampling the line connecting the
     atoms with indices 1 and 2 in the structure file, split in 20 points.
     
 * **plane_plots:** specify one or more planes along which to plot the value of the UEP. Each plane is specified by a list, and there are a number of       possible methods to specify them:
+
   * three corners, points along width, and points along height. For example, \[\[0, 0, 0\], \[3, 0, 0\], \[0, 0, 3\], 20, 20\] in a cubic lattice 
     with *a = 3* would produce a plot of the *xz* face of the cell, split into a 20 × 20 grid,
+    
   * three atom indices to act as corners, points along width, and points along height, for example, \[0, 1, 2, 20, 20\] would produce a parallelogram
     having the vector connecting atoms 0 and 1 as base, the vector connecting atoms 0 and 2 as side, and 20 points along each side for a 20 × 20 overall grid.
 
@@ -89,6 +94,20 @@ Here are listed all the keywords used to run the `pm-muairss` script. Words that
 * **castep_command:** command used to run the CASTEP executable on the system. DEFAULT: castep.serial TYPE: string;
 
 * **dftb_command:** command used to run the DFTB+ executable on the system. DEFAULT: dftb+ TYPE: string;
+
+* **script_file:** path of a submission script template to copy into each individually generated structure’s folder for use with submission systems on HPC machines. Any literal instance of the string \{seedname\} will be replaced with the name of the structure in that folder, which allows us to create sub- mission scripts for batches of CASTEP structures. DEFAULT: NONE TYPE: string;
+
+* **castep_param:** path to a CASTEP parameter file to use for all calculations. DEFAULT: NONE TYPE: string;
+
+* **dftb_set:** Slater–Koster parameterization to use with DFTB+. It determines which elements can be treated; see dftb.org for more details. Can currently be 3ob-3-1 or pbc-0-3.DEFAULT: 3ob-3-1 TYPE: string;
+
+* **dftb_optionals:** additional optional JSON files to activate for the DFTB+ parameterization. For example, including \<spinpol.json\> for 3ob-3-1 turns spin polarization on. Should be written like a list of strings (either in square brackets and comma separated or as a list using a as bullet and an entry on each line) DEFAULT: \[\] (empty list) TYPE: \[str\];
+
+* **dftb_pbc:** whether to turn on periodic boundary conditions in a DFTB+ calculation. DEFAULT: true TYPE: boolean; 
+
+* **k_points_grid:** k-points grid for periodic system calculations (CASTEP or DFTB+). Should be written like a list of integers.  DEFAULT: \[1, 1, 1\] TYPE:\[int\]; and
+
+* **max_scc_steps:** maximum number of self-consistent steps when converging the electronic wavefunction in either CASTEP or DFTB+. DEFAULT: 200 TYPE: int;
 
 
 
