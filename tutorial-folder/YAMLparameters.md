@@ -60,7 +60,7 @@ Here are listed all the keywords used to run the `pm-muairss` script. Words that
 
 * **poisson_r:** radius in Å for generating muon sites with the Poisson disk algorithm. This radius is the minimum distance at which two muons can be placed from each other when the muonated structures are generated. DEFAULT: 0.8 TYPE: float;
 
-* **uep_chden:** CASTEP charge density file: <seed>.den_fmt. DEFAULT: NONE TYPE: string;
+* **uep_chden:** CASTEP charge density file: \<seed\>.den_fmt. DEFAULT: NONE TYPE: string;
 
 * **uep_gw_factor:** Gaussian width factor used to define the size of the ionic charges by scaling the pseudopotential radius. DEFAULT: 5.0 TYPE: float;
 
