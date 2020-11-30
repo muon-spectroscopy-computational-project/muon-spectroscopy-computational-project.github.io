@@ -40,24 +40,23 @@ Finally, pm-muairss has both a “write” and a “read” mode: one to create 
 
 The `-t` `r` argument is optional; if omitted, read mode is assumed. For the parameter files, each script has its own arguments that can be set using them. A detailed description of the specific accepted parameters for the YAML files, and their meaning for each script, is provided [here](YAMLparameters).
 
-#### The parameter file
+An example of a possible work pipeline to use the UEP method could then be as follows:
 
-In order to use the vibrational averaging function, a YAML format parameter file must be created. The YAML format in this case is simply a set of entries, each on its own line, given by a parameter-value pair which are seperated by a colon. The list of required parameters is given below along with an example file.
+* run a CASTEP calculation on a bulk structure (non muonated) to compute the electronic density to use as input for the UEP method;
 
-**Mandatory Parameters**
+* generate a number of muonated structures with a random distribution of starting positions with pm-muairss in the write mode;
 
-* cell_file: Path of CASTEP .cell file, or just the filename if in working directory.
+* relax each of these structures with pm-uep-opt; and
 
-* muon_symbol: Symbol used to represent the muon custom species in the .cell file.
+* perform a cluster analysis on the relaxed structures to identify the muon stopping sites with pm-muairss in the read
+mode.
 
-* atom_indices: An array of indices of the atoms to be vibrated, counting from 1. For example, for the first 3 atoms in the system, [1, 2, 3] would be input. Enter [-1] to select all atoms.
+The clusters with the largest number of muons will then roughly correspond to the minima of the electrostatic potential, 
+with have the largest attraction basin and are likely to be representing a muon stopping site in that host material.
 
-* grid_n: Number of grid points to use along each phonon mode.
 
-* property: Property to be calculated. Currently accepted values: 
-	* hyperfine (hyperfine coupling tensors, rank matrix).
+#### Examples of application of the UEP method
 
-* value_type: Rank of quantity being calculated. Accepted values: matrix, vector, scalar.
 
 
 
