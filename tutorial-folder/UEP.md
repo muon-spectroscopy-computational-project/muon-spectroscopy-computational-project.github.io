@@ -38,7 +38,7 @@ Finally, pm-muairss has both a “write” and a “read” mode: one to create 
 
 `pm-muairss` `-t` `r` `<structure file>` `<parameters file>` # To read
 
-The `-t` `r` argument is optional; if omitted, read mode is assumed. For the parameter files, each script has its own arguments that can be set using them. A detailed description of the specific accepted parameters for the YAML files, and their meaning for each script, is provided [here](https://github.com/muon-spectroscopy-computational-project/muon-spectroscopy-computational-project.github.io/blob/master/tutorial-folder/YAMLparameters.md).
+The `-t` `r` argument is optional; if omitted, read mode is assumed. For the parameter files, each script has its own arguments that can be set using them. A detailed description of the specific accepted parameters for the YAML files, and their meaning for each script, is provided [here](YAMLparameters).
 
 #### The parameter file
 

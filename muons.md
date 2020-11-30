@@ -9,4 +9,4 @@ The development of computational methods for modelling muon spin relaxation (μS
 The figure below shows a schematic picture that describes the proposed high-level software architecture that underpins the Ada Lovelace Project on Muon Spectroscopy.  The picture shows how the existing software components, and the ones that will be developed in this project, are going to be integrated: 
 
 
-![Ada Lovelace Project on Muon Spectroscopy](https://github.com/muon-spectroscopy-computational-project/muon-spectroscopy-computational-project.github.io/blob/master/images/ALC-Scheme.jpg)
+![Ada Lovelace Project on Muon Spectroscopy](/images/ALC-Scheme.jpg)
