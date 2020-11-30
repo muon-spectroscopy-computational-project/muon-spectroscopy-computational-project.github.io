@@ -44,31 +44,20 @@ An example of a possible work pipeline to use the UEP method could then be as fo
 
 * run a CASTEP calculation on a bulk structure (non muonated) to compute the electronic density to use as input for the UEP method;
 
-* generate a number of muonated structures with a random distribution of starting positions with pm-muairss in the write mode;
+* generate a number of muonated structures with a random distribution of starting positions with `pm-muairss` in the write mode;
 
-* relax each of these structures with pm-uep-opt; and
+* relax each of these structures with `pm-uep-opt`; and
 
-* perform a cluster analysis on the relaxed structures to identify the muon stopping sites with pm-muairss in the read
+* perform a cluster analysis on the relaxed structures to identify the muon stopping sites with `pm-muairss` in the read
 mode.
 
 The clusters with the largest number of muons will then roughly correspond to the minima of the electrostatic potential, 
 with have the largest attraction basin and are likely to be representing a muon stopping site in that host material.
 
+This document presents a detailed example of how to estimate the muon stopping sites in an iron oxide. 
 
 #### Examples of application of the UEP method
 
 
 
 
-**Example Parameter File**
-
-```
-cell_file: muon_benzene.cell
-muon_symbol: H:1
-atom_indices:[1, 2, 5, 49]
-grid_n: 20
-property: hyperfine
-value_type: matrix
-weight: harmonic
-param_file: muon_benzene.param
-```
