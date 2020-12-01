@@ -65,11 +65,13 @@ Potential muon stopping sites in Fe<sub>3</sub>O<sub>4</sub> magnetite are  expe
 
 The figure below show the O(111) site predicted by the UEP method: 
 
-![O(111)](/images/fe3o4_muon_1.jpg =100x20)
+<img src="https://github.com/muon-spectroscopy-computational-project/muon-spectroscopy-computational-project.github.io/blob/master/images/fe3o4_muon_1.jpg" width="250" height="250" />
 
 And this other figure below shows an example of a planar region, perpendicular to the (111) direction, which is indicated in yellow: 
 
-![plane](/images/fe3o4_muon_2-plane.jpg =100x20)
+<img src="https://github.com/muon-spectroscopy-computational-project/muon-spectroscopy-computational-project.github.io/blob/master/images/fe3o4_muon_2-plane.jpg" width="250" height="250" />
+
+
 
 The muon is located at ≈1.3 Å from its closest oxygen atom in this planar region.  A detailed description of the input and output files, resulting 
 from the UEP method to Fe<sub>3</sub>O<sub>4</sub>, is in this [document](supplement.pdf). 
