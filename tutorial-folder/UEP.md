@@ -65,7 +65,7 @@ Potential muon stopping sites in Fe<sub>3</sub>O<sub>4</sub> magnetite are  expe
 
 The figure below show the O(111) site predicted by the UEP method: 
 
-<img src="https://github.com/muon-spectroscopy-computational-project/muon-spectroscopy-computational-project.github.io/blob/master/images/fe3o4_muon_1.jpg" width="250" height="250" />
+<img src="/images/fe3o4_muon_1.jpg" width="250" height="250" />
 
 And this other figure below shows an example of a planar region, perpendicular to the (111) direction, which is indicated in yellow: 
 
