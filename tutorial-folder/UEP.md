@@ -69,10 +69,8 @@ The figure below show the O(111) site predicted by the UEP method:
 
 And this other figure below shows an example of a planar region, perpendicular to the (111) direction, which is indicated in yellow: 
 
-<img src="https://github.com/muon-spectroscopy-computational-project/muon-spectroscopy-computational-project.github.io/blob/master/images/fe3o4_muon_2-plane.jpg" width="250" height="250" />
-
-
+<img src="/images/fe3o4_muon_2-plane.jpg" width="250" height="250" />
 
 The muon is located at ≈1.3 Å from its closest oxygen atom in this planar region.  A detailed description of the input and output files, resulting 
-from the UEP method to Fe<sub>3</sub>O<sub>4</sub>, is in this [document](supplement.pdf). 
+from the application of the UEP method to Fe<sub>3</sub>O<sub>4</sub>, is in this [document](supplement.pdf). 
 
