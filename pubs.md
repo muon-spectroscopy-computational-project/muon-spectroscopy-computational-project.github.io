@@ -20,6 +20,10 @@ Phenylacetylene-capped silicon nanoparticles have attracted interest as a novel 
 **_The Journal of Chemical Physics, 153, 044111 (2020)_**
 In this work, we present a software implementation of the Unperturbed Electrostatic Potential (UEP) Method: an approach used for finding the muon stopping site in crystalline materials. The UEP method requires only one DFT calculation, necessary to compute the electronic density of the host material. 
 
+* [Mudirac: A Dirac equation solver for elemental analysis with muonic X‐rays](https://onlinelibrary.wiley.com/doi/full/10.1002/xrs.3212)\\
+**_X-Ray Spectrometry,1–17, (2020)_**
+In this work, we present mudirac: a new open‐source software for the integration of the radial Dirac equation developed specifically for muonic atoms. The software can be used to predict frequencies and transitions probabilities between levels of the muonic atom, which are useful for the interpretation of muonic X‐ray spectra in elemental analysis. 
+
 
 ### Presentations
 
