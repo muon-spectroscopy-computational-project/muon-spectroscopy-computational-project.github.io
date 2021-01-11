@@ -45,11 +45,11 @@ This presentation discusses the computational methods that we had developed so f
 This talk presents the key concepts and the main approximations used in our computer models, and also discusses why some of these approximations are relevant to muon experiments. In particular, there is a brief introduction to Density Functional Theory (DFT) and how it can be used to study muonated molecular and crystalline systems. This talk also presents the basis for the method that we are developing to predict the muon stopping sites in crystalline materials.
 
 * [Computer Simulations for Interpreting μSR Experiments](https://www.isis.stfc.ac.uk/Pages/Muon-Spectroscopy-Advanced-School.aspx)\\
-**_ International Advanced School on Muon Spectroscopy.  15-22 August 2019, Rutherford Appleton Laboratory, Harwell, UK._**\\
+**_International Advanced School on Muon Spectroscopy.  15-22 August 2019, Rutherford Appleton Laboratory, Harwell, UK._**\\
 This talk presents the key concepts and the main approximations used in our computer models. The talk discusses Density Functional Theory (DFT), briefly presents some of the current codes that implement DFT and how these different codes can be used to study muonated crystalline systems. In particular, the talk presents all the methods that we developed to predict the muon stopping site in crystalline systems. 
 
 * [The Ada Lovelace Project on Muon Spectroscopy](https://www.scd.stfc.ac.uk/Pages/Muon-Site-Calculation-Meeting-2020.aspx)\\
-**_ 2020 Edition Muon Site Calculation Meeting (Virtual Edition) Friday 4th September, 2020._**\\
+**_2020 Edition Muon Site Calculation Meeting (Virtual Edition) Friday 4th September, 2020._**\\
 In this talk, we presented the work that we are doing -and plan to do- as part of a grant that we obtained from Ada Lovelace Centre for the development of muon software. The main objective of this grant is the development of a sustainable and user-friendly software platform that can be used for developing software for interpreting muon experiments.
 
 
