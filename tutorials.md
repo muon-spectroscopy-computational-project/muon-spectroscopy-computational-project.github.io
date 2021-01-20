@@ -24,6 +24,7 @@ this could be a good point to start!
 
 #### Finding the Muon Stopping Site
 
+* [The symmetry analysis method](tutorial-folder/symmetry)
 * [The Unperturbed Electrostatic Potential method](tutorial-folder/UEP)
 
 #### Negative Muons 
