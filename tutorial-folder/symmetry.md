@@ -22,7 +22,7 @@ where the structure file has to be any supported crystallographic file format (s
 
 The muon stopping sites in TiO<sub>2</sub> rutile were determined by transverse field μSR measurements performed in the MUSR instrument at ISIS(UK). In the these stopping sites, the muon has a low temperature ground state and a high temperature excited state, both corresponding to a muon bound to one of the six oxygen atoms that form an octahedron around the Ti<sup>3+</sup> at the center of the TiO<sub>2</sub> rutile unit cell. Each one of these stopping sites has a different O–Ti<sup>3+</sup> bonding configuration, with the ground state formed by bonding the muon to the in-plane oxygen atoms that lie in the same plane as Ti<sup>3+</sup>. These two sites are related by symmetry and are only distinguished by the electronic structure of the TiO<sub>2</sub> rutile. 
 
-Running `pm-symmetry` on a CASTEP TiO<sub>2</sub> rutile structural file [rutile-out.cell](images/rutile-out.cell) produces the following output: 
+Running `pm-symmetry` on a CASTEP TiO<sub>2</sub> rutile structural file [rutile-out.cell](/images/rutile-out.cell) produces the following output: 
 
 > `Wyckoff points symmetry report for rutile-out.cell  
 > Space Group International Symbol: P4_2/mnm  
