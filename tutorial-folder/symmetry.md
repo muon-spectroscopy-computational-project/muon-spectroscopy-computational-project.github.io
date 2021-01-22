@@ -45,4 +45,5 @@ The coordinates in bold indicate the muon stopping site that agrees with the exp
 
 <img src="/images/rutile_muon.jpg" width="250" height="250" />
 
+So, it is clear that there is a connection between the symmetry properties of the crystalline material and the potential muon stopping sites in that material.  The symmetry method is an extremely fast method.  However, if possible, this method should usually be used in conjunction with experimental results and physical intuition.  It is the case that there may be a significan number of high symmetry points in a given crystalline material and, unless there is some extra information available, it is difficult to discriminate between potental stopping sites. 
 
