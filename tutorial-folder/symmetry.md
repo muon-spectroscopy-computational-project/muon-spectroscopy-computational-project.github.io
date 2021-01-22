@@ -23,8 +23,8 @@ where the structure file has to be any supported crystallographic file format (s
 The muon stopping sites in TiO<sub>2</sub> rutile were determined by transverse field μSR measurements performed in the MUSR instrument at ISIS(UK). In the these stopping sites, the muon has a low temperature ground state and a high temperature excited state, both corresponding to a muon bound to one of the six oxygen atoms that form an octahedron around the Ti<sup>3+</sup> at the center of the TiO<sub>2</sub> rutile unit cell. Each one of these stopping sites has a different O–Ti<sup>3+</sup> bonding configuration, with the ground state formed by bonding the muon to the in-plane oxygen atoms that lie in the same plane as Ti<sup>3+</sup>. These two sites are related by symmetry and are only distinguished by the electronic structure of the TiO<sub>2</sub> rutile. 
 
 Running `pm-symmetry` on a CASTEP TiO<sub>2</sub> rutile structural file [rutile-out.cell](/images/rutile-out.cell) produces the following output: 
-
-> `Wyckoff points symmetry report for rutile-out.cell  
+`
+> Wyckoff points symmetry report for rutile-out.cell  
 > Space Group International Symbol: P4_2/mnm  
 > Space Group Hall Number: 419  
 
@@ -41,18 +41,8 @@ Running `pm-symmetry` on a CASTEP TiO<sub>2</sub> rutile structural file [rutile
 > [2.33609456 2.33609456 0.        ]             [0.5 0.5 0. ]           none  
 `
 
+The coordinates in bold indicate the muon stopping site that agrees with the experimental results. The predicted stopping site is shown in the figure below:
+
+<img src="/images/rutile_muon.jpg" width="250" height="250" />
 
 
-* located within a planar region that is perpendicular to the (111) direction in the unit cell and
-* situated within ≈1.5 Å of one of the oxygen atoms defining the planar region. 
-
-The figure below show the O(111) site predicted by the UEP method: 
-
-<img src="/images/fe3o4_muon_1.jpg" width="250" height="250" />
-
-And this other figure below shows an example of a planar region, perpendicular to the (111) direction, which is indicated in yellow: 
-
-<img src="/images/fe3o4_muon_2-plane.jpg" width="250" height="250" />
-
-The muon is located at ≈1.3 Å from its closest oxygen atom in this planar region.  A detailed description of the input and output files, resulting 
-from the application of the UEP method to Fe<sub>3</sub>O<sub>4</sub>, is in this [document](supplement.pdf). 
