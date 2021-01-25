@@ -1,32 +1,25 @@
 ## The Unperturbed Electrostatic Potential method
 
-Here we present our software implementation of the Unperturbed Electrostatic Potential (UEP) Method: a method that requires only one DFT calculation, which is used to compute the electronic density of the host material. This, in turn, is used to calculate the minima of the host material’s electrostatic potential and to estimate the muon stopping site, relying on the approximation that the muon’s presence does not significantly affect its surroundings. 
+Here we present our software implementation of the Unperturbed Electrostatic Potential (UEP) Method: a method that requires only one DFT calculation, which is used to compute the electronic density of the host material. This, in turn, is used to calculate the minima of the host material’s electrostatic potential and to estimate the stopping site of the **diagmagnetic muon**, relying on the approximation that the muon’s presence does not significantly affect its surroundings. 
 
-The software has a complementary tool, which evaluates the interstitial high-symmetry sites in the host material that have not yet been occupied by a muon. In practice, very often, the muon stopping site will be a high-symmetry site of the crystal that has not already been occupied by another atom. Hence, the complementary tool performs a crystallographic analysis of the pure system as a useful first step. We have exlplained how this complementary tool works 
+The UEP method can be used with a complementary tool, which evaluates the interstitial high-symmetry sites in the host material that have not yet been occupied by a muon. In practice, very often, the muon stopping site will be a high-symmetry site of the crystal that has not already been occupied by another atom. Hence, the complementary tool performs a crystallographic analysis of the pure system as a useful first step. We have exlplained how this complementary tool works 
 [here](./symmetry).
 
-A detailed description of the methodology is given in this [paper by S. Sturniolo and L. Liborio](https://aip.scitation.org/doi/10.1063/5.0012381). 
+A detailed description of this methodology is given in this [paper by S. Sturniolo and L. Liborio](https://aip.scitation.org/doi/10.1063/5.0012381). 
 
 ### Details of the software implementation
 
-Both the symmetry analysis and the UEP implementation can be found in a Python library we deployed specifically to aid muon computational science: `pymuon-suite`. The library can be found on Github and is released under a GNU v3.0 open source license. 
+The commands for running the UEP method re the following:
 
-Once installed, `pymuon-suite` provides the user both with a Python API to use for custom programs and with a series of pre-packaged scripts that perform the most common operations. Four of these scripts are relevant for finding the muon stopping site using the UEP method:
-	
-`pm-symmetry` performs the symmetry analysis;
-	
-`pm-uep-opt` performs an optimization of the muon position under the unperturbed electrostatic potential;
+`pm-uep-opt` performs an optimization of the muon position by minimising the classical electrostatic forces 
+-which originates on the unperturbed electrostatic potential- that act on the muon;
  	
-`pm-uep-plot` produces 1D and 2D files describing the UEP along paths or on specified planes useful to produce plots; and
+`pm-uep-plot` produces 1D and 2D plots describing the UEP along specific paths or planes defined in the crystalline structure; and
 	
-`pm-muairss` produces batches of structure files with a muon defect added following a Poisson random distribution and analyses and clusters the results of their optimization.
-
-The symmetry script can be run simply by executing the command:
-
-`pm-symmetry` `<structure file>`
-
-where the structure file has to be any supported crystallographic file format (such as .cif or .cell).  
-
+`pm-muairss` its application is twofold: first, it is used to produce batches of structure files with a muon defect added following
+a Poisson random distribution. These mmuonated structural files are the ones optimized with `pm-uep-opt` and, then, `pm-muairss`
+is used again to analyse and cluster the results of these optimizations.
+ 
 For the UEP scripts, parameter files in the YAML format are necessary. These scripts are run with the commands: 
 
 `pm-uep-plot` `<parameters file>` 
