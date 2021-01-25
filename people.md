@@ -19,7 +19,7 @@
 * **Francis Pratt**
 * **Stephen Cottrell**
 
-#### Former Members
+### Former Members
 
 * **Adam Laverack**,  (Scientific Computing Department)
 * **Samuel Jackson**, (Scientific Computing Department)
