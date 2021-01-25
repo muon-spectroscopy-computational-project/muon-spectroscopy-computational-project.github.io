@@ -41,9 +41,9 @@ Running `pm-symmetry` on a CASTEP TiO<sub>2</sub> rutile structural file [rutile
 > [2.33609456 2.33609456 0.        ]             [0.5 0.5 0. ]           none  
 `
 
-The coordinates in bold indicate the muon stopping site that agrees with the experimental results. The predicted stopping site is shown in the figure below:
+The coordinates in bold indicate the muon stopping site that agrees with the experimental results. The predicted stopping site is shown in the figure below.  As we mentioned above, the  muon is bonded to one of the six oxygen atoms that form an octahedron around the Ti<sup>3+</sup> atom, which is shown at the center of the TiO<sub>2</sub> rutile unit cell in this figure:
 
 <img src="/images/rutile_muon.jpg" width="250" height="250" />
 
-So, it is clear that there is a connection between the symmetry properties of the crystalline material and the potential muon stopping sites in that material.  The symmetry method is an extremely fast method.  However, if possible, this method should usually be used in conjunction with experimental results and physical intuition.  It is the case that there may be a significan number of high symmetry points in a given crystalline material and, unless there is some extra information available, it is difficult to discriminate between potental stopping sites. 
+So, it is clear that there is a connection between the symmetry properties of the crystalline material and the potential muon stopping sites in that material.  The symmetry method is an extremely fast method.  However, if possible, this method should usually be used in conjunction with experimental results and physical intuition.  It is the case that there may be a significant number of high symmetry points in a given crystalline material and, unless there is some extra information available, it is difficult to discriminate between potental stopping sites. 
 
