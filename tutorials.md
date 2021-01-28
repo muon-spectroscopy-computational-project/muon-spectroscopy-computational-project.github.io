@@ -29,6 +29,7 @@ this could be a good point to start!
 
 #### Finding the Muon Stopping Site
 
+* [The Ab Initio Random Structure Search (AIRSS) method](tutorial-folder/AIRSS)
 * [The symmetry analysis method](tutorial-folder/symmetry)
 * [The Unperturbed Electrostatic Potential method](tutorial-folder/UEP)
 
