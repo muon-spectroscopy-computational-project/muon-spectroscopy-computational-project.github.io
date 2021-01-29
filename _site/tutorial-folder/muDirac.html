@@ -1,0 +1,187 @@
+<!doctype html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+
+    <title>The Muon Spectroscopy Computational Project</title>
+
+<!-- Begin Jekyll SEO tag v2.3.0 -->
+<title>Prediction of frequencies and probabilities of transition between energy levels of muonic atoms | The Muon Spectroscopy Computational Project</title>
+<meta property="og:title" content="Prediction of frequencies and probabilities of transition between energy levels of muonic atoms" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Software and methods to make the muon spectroscopist’s life easier" />
+<meta property="og:description" content="Software and methods to make the muon spectroscopist’s life easier" />
+<link rel="canonical" href="http://localhost:4000/tutorial-folder/muDirac.html" />
+<meta property="og:url" content="http://localhost:4000/tutorial-folder/muDirac.html" />
+<meta property="og:site_name" content="The Muon Spectroscopy Computational Project" />
+<script type="application/ld+json">
+{"@type":"WebPage","publisher":null,"headline":"Prediction of frequencies and probabilities of transition between energy levels of muonic atoms","dateModified":null,"datePublished":null,"sameAs":null,"url":"http://localhost:4000/tutorial-folder/muDirac.html","author":null,"mainEntityOfPage":null,"image":null,"description":"Software and methods to make the muon spectroscopist’s life easier","name":null,"@context":"http://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+
+
+    <link rel="stylesheet" href="/assets/css/style.css?v=67b424d9a4e3483433ccd324e139812b82ae7070">
+    <meta name="viewport" content="width=device-width">
+    <!--[if lt IE 9]>
+    <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+
+    <!-- MathJax support -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-AMS-MML_HTMLorMML" type="text/javascript"></script>
+  </head>
+  <body>
+    <div class="wrapper">
+      <header>
+        <h1><a href="/index.html" >The Muon Spectroscopy Computational Project</a></h1>
+        <p>Software and methods to make the muon spectroscopist's life easier</p>
+
+        <p>
+          <h3><a href="/people.html">People</a></h3>
+          <h3><a href="/pubs.html">Publications</a></h3>
+          <h3><a href="/tutorials.html">Tutorials</a></h3>
+          <h3><a href="/software.html">Software</a></h3>
+          <h3><a href="/muons.html">Ada Lovelace Muon Project</a></h3>
+        </p>
+
+        
+
+        
+          <p class="view"><a href="http://github.com/muon-spectroscopy-computational-project">View Organization on Github</a></p>
+        
+
+        
+      </header>
+      <section>
+
+      <h3 id="prediction-of-frequencies-and-probabilities-of-transition-between-energy-levels-of-muonic-atoms">Prediction of frequencies and probabilities of transition between energy levels of muonic atoms</h3>
+
+<h4 id="x-ray-spectroscopy-with-negative-muons">X-Ray Spectroscopy with negative muons</h4>
+
+<p>While positive muons can be used as magnetic probes acting as if they were <em>light protons</em>, negative muons have wholly different uses due to behaving in matter more as if they were <em>heavy electrons</em>. Negative muons possess the same charge and spin as electrons, and so will form bound states with nuclei that are known as muonic atoms. These atoms possess peculiar properties due to the heavier mass of the muon:</p>
+
+<ol>
+  <li>the muon orbitals around the nucleus are much smaller and denser than the electronic ones, meaning that the muon tends to be rather insensitive to the presence of electrons - as it is closer to the nucleus than any of them;</li>
+  <li>for the same reason, the orbitals can overlap significantly with the atomic nucleus, and their energy is affected by the shape of its charge distribution;</li>
+  <li>the orbitals have much higher binding energies, which means they can also be treated only with a relativistic theory. In classical terms, you could say the muons are ‘orbiting’ the nucleus at speeds close to that of light.</li>
+</ol>
+
+<p>The consequence of these facts is that when cascading on a nucleus to form a muonic atom, muons will shed their energy in the form of highly energetic X-Ray photons, and the specific energies of these photons will be tied to the transitions between levels that are unique for each element. For this reason, muons can be <a href="https://www.sciencedirect.com/science/article/abs/pii/S0026265X1500301X?via%3Dihub">an excellent probe for non-destructive elemental analysis</a>. The exact characteristic energies for each element can be tabulated by experimental calibration, but they can also be derived from first principles, by solving the quantum equations to find the orbitals and their energies. However, this is not as simple as applying the usual Schrödinger equation, because as said above, the muons orbit the nucleus at relativistic energies, and the Dirac equation is necessary; plus, at these energies, the electrostatic potential itself stops being perfectly Coulombic. For these reasons, we have provided a software that easily allows one to perform these calculations by including all necessary details to achieve precision sufficient for the interpretation of experiments.</p>
+
+<h4 id="mudirac">MuDirac</h4>
+
+<p>MuDirac is a simulation software that integrates the Dirac equation for muonic atoms to compute their X-Ray transition energies; it is written in C++ and can be found <a href="https://github.com/muon-spectroscopy-computational-project/mudirac">on GitHub</a>. Its use and functioning is extensively documented in the paper <a href="https://onlinelibrary.wiley.com/doi/full/10.1002/xrs.3212">S. Sturniolo, A. Hillier, “Mudirac: A Dirac equation solver for elemental analysiswith muonic X-rays”, <em>X-Ray Spectrom. 2020;1–17</em></a>, which should be cited by any work using it. Here we will give a quick tutorial on how to start using it for simple cases.</p>
+
+<h5 id="installation">Installation</h5>
+
+<p>MuDirac uses CMake as a build system, and requires a C++ compiler. In order to compile it and prepare it to be executed on a Linux, Unix or MacOS system with a working C++ compiler installed, follow these steps:</p>
+
+<ol>
+  <li>download and unpack (or <code class="highlighter-rouge">git clone</code>) the repository on your local system;</li>
+  <li>within the main folder of the repository (the one containing the <code class="highlighter-rouge">README.md</code> file), create a subfolder called <code class="highlighter-rouge">build</code>;</li>
+  <li>within the <code class="highlighter-rouge">build</code> folder, run the following commands:</li>
+</ol>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>cmake ..
+make mudirac
+</code></pre></div></div>
+
+<p>There will be now a folder <code class="highlighter-rouge">bin</code> containing a working compiled executable, <code class="highlighter-rouge">mudirac</code>. You can link or move this file wherever you need to use it.</p>
+
+<h5 id="usage">Usage</h5>
+
+<p>MuDirac works simply by running it with an input file:</p>
+
+<p><code class="highlighter-rouge">mudirac input.in</code></p>
+
+<p>The input file is a text file containing rows of the form:</p>
+
+<p><code class="highlighter-rouge">keyword: value</code></p>
+
+<p>A full list of keywords can be found <a href="https://github.com/muon-spectroscopy-computational-project/mudirac/blob/master/docs/Keywords.pdf">here</a>. To learn how to use it, let’s try a simple example. Open a text editor and write the following:</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>element: Au
+isotope: 197
+xr_lines: K1-L2,K1-L3
+write_spec: T
+</code></pre></div></div>
+
+<p>Save this as <code class="highlighter-rouge">Au_basic.in</code> and then pass it to MuDirac. The simulation should be really fast and it should produce the files <code class="highlighter-rouge">Au_basic.xr.out</code>, <code class="highlighter-rouge">Au_basic.log</code>, <code class="highlighter-rouge">Au_basic.err</code> and <code class="highlighter-rouge">Au_basic.spec.dat</code>. The <code class="highlighter-rouge">.log</code> and <code class="highlighter-rouge">.err</code> files are just a log of the program’s calculations and a file where any errors are stored; they are not important unless you’re trying to figure out what went wrong in a failed calculation. The <code class="highlighter-rouge">.xr.out</code> file contains a text summary of the result, and the <code class="highlighter-rouge">.spec.dat</code> file contains tabulated data for a simulated spectrum.
+Let’s look at the input file and at what each line does.</p>
+
+<p><code class="highlighter-rouge">element: Au</code>
+<code class="highlighter-rouge">isotope: 197</code></p>
+
+<p>This specifies that we’re interested in studying gold, specifically the 197-Au isotope.</p>
+
+<p><code class="highlighter-rouge">xr_lines: K1-L2,K1-L3</code></p>
+
+<p>This indicates which X-ray transitions we want to know about. The notation is the IUPAC standard notation for X-ray spectrometry. These would be the transitions connecting the 1s shell (K1) to the 2p1/2 and 2p3/2 shells (L2, L3). Remember that because these orbitals are relativistic, spin-orbit coupling is built into them, and orbitals with different total angular momentum (orbital + spin) have different energies.</p>
+
+<p><code class="highlighter-rouge">write_spec: T</code></p>
+
+<p>Finally, this tells to the program to write also a <code class="highlighter-rouge">.spec.dat</code> file. Without this line, it wouldn’t be created. <code class="highlighter-rouge">T</code> here stands for True.</p>
+
+<p>Now open the <code class="highlighter-rouge">Au_basic.xr.out</code> file. The contents should look something like this:</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code># Z = 79, A = 197 amu, m = 206.768 au
+Line    DeltaE (eV)     W_12 (s^-1)
+K1-L2   1.43693e+07             4.94871e+18
+K1-L3   1.48315e+07             4.63201e+18
+</code></pre></div></div>
+
+<p>The first line is a header that records the context of the calculation - the element’s atomic number and atomic mass, and the mass of the particle in atomic units (for a muon this will always be 206.768 au). The next lines show for each line the transition energy in electron volts and the transition rate in 1/seconds, which connects to the relative intensity of the line in the spectrum. Generally speaking, lines with higher transition rates will be stronger, though the connection isn’t perfect as there are other factors at play.</p>
+
+<p>Now, this result is achieved with the default settings, that are in fact insufficient to simulate accurately an atom with a large Z like gold; as a general rule, the higher the charge of a nucleus, the more important all the additional terms. Copy <code class="highlighter-rouge">Au_basic.in</code> as <code class="highlighter-rouge">Au.in</code> and edit it to add lines so that it looks like this:</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>element: Au
+isotope: 197
+xr_lines: K1-L2,K1-L3
+write_spec: T
+nuclear_model: FERMI2
+uehling_correction: T
+electronic_config: Au
+</code></pre></div></div>
+
+<p>This adds three more lines:</p>
+
+<p><code class="highlighter-rouge">nuclear_model: FERMI2</code></p>
+
+<p>This sets the nucleus to be modelled not as a point charge, but as a Fermi 2-term charge distribution, which is far more accurate to reality. The program contains parameters for this distribution for all isotopes of interest in the periodic table. This will account for the finite size of the nucleus, and the overlap of the muon orbitals with it.</p>
+
+<p><code class="highlighter-rouge">uehling_correction: T</code></p>
+
+<p>This accounts for the Uehling correction, a quantum field effect relevant to electrostatics at these high energies. It can be undestood as accounting for the vacuum itself acting as a polarizable medium; because virtual electron-positron pairs can be generated in quantum field theory, these partially shield the charges and lower the traditional Coulomb force. This is an important term especially for very massive nuclei like Au or Pb and orbitals close to the nucleus.</p>
+
+<p><code class="highlighter-rouge">electronic_config: Au</code></p>
+
+<p>This term includes approximatively the effect of the other electrons orbiting the nucleus. It does not solve the equations for them, rather it just places them in fixed idealised orbitals and builds a negative charge background from them. The result is an additional correction to the energy, that is however tiny compared to the previous two terms, and often easily ignored.</p>
+
+<p>Try running again MuDirac with this input. The calculation should take longer, and this time the output in <code class="highlighter-rouge">Au.xr.out</code> should be:</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code># Z = 79, A = 197 amu, m = 206.768 au
+Line    DeltaE (eV)     W_12 (s^-1)
+K1-L2   5.5936e+06              1.62308e+18
+K1-L3   5.76294e+06             1.76987e+18
+</code></pre></div></div>
+
+<p>Note the significant changes - the energies are almost three times smaller than previously! You can try removing each of the new terms individually, or commenting them out by adding <code class="highlighter-rouge">#</code> at the beginning of a line, and re-running to see their effects. Now to familiarize yourself you can try a few more things:</p>
+
+<ol>
+  <li>try adding more <code class="highlighter-rouge">xr_lines</code>, for example L1-M2 and L1-M3;</li>
+  <li>try adding a range of lines; this can be written as K1:M5-K1:M5. It will compute all transitions within the given ranges that obey the selection rules to be allowed;</li>
+  <li>try plotting the spectra in the <code class="highlighter-rouge">.spec.dat</code> files, using Gnuplot or importing them in software like Excel or Origin.</li>
+</ol>
+
+
+      </section>
+      <footer>
+        
+        <p><small>Hosted on GitHub Pages &mdash; Theme by <a href="https://github.com/orderedlist">orderedlist</a></small></p>
+      </footer>
+    </div>
+    <script src="/assets/js/scale.fix.js"></script>
+
+
+  
+  </body>
+</html>

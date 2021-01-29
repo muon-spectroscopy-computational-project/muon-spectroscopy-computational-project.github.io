@@ -16,11 +16,11 @@
 <meta property="og:url" content="http://localhost:4000/software.html" />
 <meta property="og:site_name" content="The Muon Spectroscopy Computational Project" />
 <script type="application/ld+json">
-{"@type":"WebPage","publisher":null,"url":"http://localhost:4000/software.html","image":null,"name":null,"headline":"Software","dateModified":null,"datePublished":null,"sameAs":null,"description":"Software and methods to make the muon spectroscopist’s life easier","author":null,"mainEntityOfPage":null,"@context":"http://schema.org"}</script>
+{"@type":"WebPage","publisher":null,"headline":"Software","dateModified":null,"datePublished":null,"sameAs":null,"url":"http://localhost:4000/software.html","author":null,"mainEntityOfPage":null,"image":null,"description":"Software and methods to make the muon spectroscopist’s life easier","name":null,"@context":"http://schema.org"}</script>
 <!-- End Jekyll SEO tag -->
 
 
-    <link rel="stylesheet" href="/assets/css/style.css?v=bdb0c5f7a9827e4e68fa56c0a6505c695fd46645">
+    <link rel="stylesheet" href="/assets/css/style.css?v=67b424d9a4e3483433ccd324e139812b82ae7070">
     <meta name="viewport" content="width=device-width">
     <!--[if lt IE 9]>
     <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
@@ -40,7 +40,7 @@
           <h3><a href="/pubs.html">Publications</a></h3>
           <h3><a href="/tutorials.html">Tutorials</a></h3>
           <h3><a href="/software.html">Software</a></h3>
-          <h3><a href="/muons.html">The Life of μ</a></h3>
+          <h3><a href="/muons.html">Ada Lovelace Muon Project</a></h3>
         </p>
 
         
@@ -55,7 +55,46 @@
 
       <h3 id="software">Software</h3>
 
-<p>Work in Progress</p>
+<p>The Muon Spectroscopy Computational Project (MSCP) uses a wide range of software 
+packages that allow us to develop our tools. Below, there is a list of 
+some of the software packages currently in use by the MSCP:</p>
+
+<ul>
+  <li>
+    <p><strong><a href="https://wiki.fysik.dtu.dk/ase/">The Atomistic Simulation Environment</a></strong>:
+The Atomic Simulation Environment (ASE) is a set of tools and Python modules 
+for setting up, manipulating, running, visualizing and analyzing atomistic simulations
+performed with many of the most popular simulation codes currently available.</p>
+  </li>
+  <li>
+    <p><strong><a href="https://ccp-nc.github.io/soprano/">Soprano</a></strong>:
+Soprano is a Python library developed and maintained by the <strong><a href="https://www.ccpnc.ac.uk/">Collaborative Computational 
+Project for NMR Crystallography</a></strong>. Soprano is a software tool designed
+to help scientists, who are working with crystallography and simulations, to generate, 
+manipulate, run and analyse computer simulations on large data sets of crystalline structures. 
+It provides a number of functionalities to help automate many common tasks in 
+computational crystallography.</p>
+  </li>
+  <li>
+    <p><strong><a href="http://cas-web.esc.rl.ac.uk/">CASTEP</a></strong>:
+CASTEP is a leading code for calculating the properties of materials from first principles. 
+Using density functional theory, it can simulate a wide range of properties of materials 
+proprieties including energetics, structure at the atomic level, vibrational properties and 
+electronic response properties. In particular, it has a wide range of spectroscopic 
+features that link directly to experiment, such as infra-red and Raman spectroscopies, 
+NMR, and core level spectra. <code class="highlighter-rouge">pymuno-suite</code> can use CASTEP simulations for predicting the muon 
+stopping site.</p>
+  </li>
+  <li>
+    <p><strong><a href="https://dftbplus.org/">DFTB+</a></strong>:
+DFTB+ is a fast, efficient and versatile quantum mechanical simulation software package.
+Using DFTB+ you can carry out quantum mechanical simulations whose precision is similar 
+to those of density functional theory, but which are typically around two orders of magnitude faster 
+than DFT simulations. <code class="highlighter-rouge">pymuno-suite</code> uses DFTB+ simulations specially to treat crystalline 
+organic systems.</p>
+  </li>
+</ul>
+
 
 
       </section>

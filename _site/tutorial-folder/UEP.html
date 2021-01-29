@@ -1,0 +1,148 @@
+<!doctype html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+
+    <title>The Muon Spectroscopy Computational Project</title>
+
+<!-- Begin Jekyll SEO tag v2.3.0 -->
+<title>The Unperturbed Electrostatic Potential method | The Muon Spectroscopy Computational Project</title>
+<meta property="og:title" content="The Unperturbed Electrostatic Potential method" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Software and methods to make the muon spectroscopist’s life easier" />
+<meta property="og:description" content="Software and methods to make the muon spectroscopist’s life easier" />
+<link rel="canonical" href="http://localhost:4000/tutorial-folder/UEP.html" />
+<meta property="og:url" content="http://localhost:4000/tutorial-folder/UEP.html" />
+<meta property="og:site_name" content="The Muon Spectroscopy Computational Project" />
+<script type="application/ld+json">
+{"@type":"WebPage","publisher":null,"headline":"The Unperturbed Electrostatic Potential method","dateModified":null,"datePublished":null,"sameAs":null,"url":"http://localhost:4000/tutorial-folder/UEP.html","author":null,"mainEntityOfPage":null,"image":null,"description":"Software and methods to make the muon spectroscopist’s life easier","name":null,"@context":"http://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+
+
+    <link rel="stylesheet" href="/assets/css/style.css?v=67b424d9a4e3483433ccd324e139812b82ae7070">
+    <meta name="viewport" content="width=device-width">
+    <!--[if lt IE 9]>
+    <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+
+    <!-- MathJax support -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-AMS-MML_HTMLorMML" type="text/javascript"></script>
+  </head>
+  <body>
+    <div class="wrapper">
+      <header>
+        <h1><a href="/index.html" >The Muon Spectroscopy Computational Project</a></h1>
+        <p>Software and methods to make the muon spectroscopist's life easier</p>
+
+        <p>
+          <h3><a href="/people.html">People</a></h3>
+          <h3><a href="/pubs.html">Publications</a></h3>
+          <h3><a href="/tutorials.html">Tutorials</a></h3>
+          <h3><a href="/software.html">Software</a></h3>
+          <h3><a href="/muons.html">Ada Lovelace Muon Project</a></h3>
+        </p>
+
+        
+
+        
+          <p class="view"><a href="http://github.com/muon-spectroscopy-computational-project">View Organization on Github</a></p>
+        
+
+        
+      </header>
+      <section>
+
+      <h2 id="the-unperturbed-electrostatic-potential-method">The Unperturbed Electrostatic Potential method</h2>
+
+<p>Here we present our software implementation of the Unperturbed Electrostatic Potential (UEP) Method: a method that requires only one DFT calculation, which is used to compute the electronic density of the host material. This, in turn, is used to calculate the minima of the host material’s electrostatic potential and to estimate the stopping site of the <strong>diagmagnetic muon</strong>, relying on the approximation that the muon’s presence does not significantly affect its surroundings.</p>
+
+<p>The UEP method can be used with a complementary tool, which evaluates the interstitial high-symmetry sites in the host material that have not yet been occupied by a muon. In practice, very often, the muon stopping site will be a high-symmetry site of the crystal that has not already been occupied by another atom. Hence, the complementary tool performs a crystallographic analysis of the pure system as a useful first step. We have exlplained how this complementary tool works 
+<a href="./symmetry">here</a>.</p>
+
+<p>A detailed description of this methodology is given in this <a href="https://aip.scitation.org/doi/10.1063/5.0012381">paper by S. Sturniolo and L. Liborio</a>.</p>
+
+<h3 id="details-of-the-software-implementation">Details of the software implementation</h3>
+
+<p>The commands for running the UEP method re the following:</p>
+
+<p><code class="highlighter-rouge">pm-uep-opt</code> performs an optimization of the muon position by minimising the classical electrostatic forces 
+-which originates on the unperturbed electrostatic potential- that act on the muon;</p>
+
+<p><code class="highlighter-rouge">pm-uep-plot</code> produces 1D and 2D plots describing the UEP along specific paths or planes defined in the crystalline structure; and</p>
+
+<p><code class="highlighter-rouge">pm-muairss</code> its application is twofold: first, it is used to produce batches of structure files with a muon defect added following
+a Poisson random distribution. These mmuonated structural files are the ones optimized with <code class="highlighter-rouge">pm-uep-opt</code> and, then, <code class="highlighter-rouge">pm-muairss</code>
+is used again to analyse and cluster the results of these optimizations.</p>
+
+<p>For the UEP scripts, parameter files in the YAML format are necessary. These scripts are run with the commands:</p>
+
+<p><code class="highlighter-rouge">pm-uep-plot</code> <code class="highlighter-rouge">&lt;parameters file&gt;</code></p>
+
+<p><code class="highlighter-rouge">pm-uep-opt</code> <code class="highlighter-rouge">&lt;parameters file&gt;</code></p>
+
+<p>Finally, pm-muairss has both a “write” and a “read” mode: one to create the batches of structure files with a muon defect, and the other to interpret the results of their optimization. It also needs both a structure and a parameter YAML file as inputs. To avoid mistakenly overwriting important data, the default mode is read. The two modes are used as follows:</p>
+
+<p><code class="highlighter-rouge">pm-muairss</code> <code class="highlighter-rouge">-t</code> <code class="highlighter-rouge">w</code> <code class="highlighter-rouge">&lt;structure file&gt;</code> <code class="highlighter-rouge">&lt;parameters file&gt;</code> # To write</p>
+
+<p><code class="highlighter-rouge">pm-muairss</code> <code class="highlighter-rouge">-t</code> <code class="highlighter-rouge">r</code> <code class="highlighter-rouge">&lt;structure file&gt;</code> <code class="highlighter-rouge">&lt;parameters file&gt;</code> # To read</p>
+
+<p>The <code class="highlighter-rouge">-t</code> <code class="highlighter-rouge">r</code> argument is optional; if omitted, read mode is assumed. For the parameter files, each script has its own arguments that can be set using them. A detailed description of the specific accepted parameters for the YAML files, and their meaning for each script, is provided <a href="YAMLparameters">here</a>.</p>
+
+<p>An example of a possible work pipeline to use the UEP method could then be as follows:</p>
+
+<ul>
+  <li>
+    <p>run a CASTEP calculation on a bulk structure (non muonated) to compute the electronic density to use as input for the UEP method;</p>
+  </li>
+  <li>
+    <p>generate a number of muonated structures with a random distribution of starting positions with <code class="highlighter-rouge">pm-muairss</code> in the write mode;</p>
+  </li>
+  <li>
+    <p>relax each of these structures with <code class="highlighter-rouge">pm-uep-opt</code>; and</p>
+  </li>
+  <li>
+    <p>perform a cluster analysis on the relaxed structures to identify the muon stopping sites with <code class="highlighter-rouge">pm-muairss</code> in the read
+mode.</p>
+  </li>
+</ul>
+
+<p>The clusters with the largest number of muons will then roughly correspond to the minima of the electrostatic potential, 
+with have the largest attraction basin and are likely to be representing a muon stopping site in that host material.</p>
+
+<h3 id="examples-of-application-of-the-uep-method">Examples of application of the UEP method</h3>
+
+<h4 id="magnetite-fe3o4">Magnetite (Fe<sub>3</sub>O<sub>4</sub>)</h4>
+
+<p>Potential muon stopping sites in Fe<sub>3</sub>O<sub>4</sub> magnetite are  experimentally well known.  The stopping sites are:</p>
+
+<ul>
+  <li>located within a planar region that is perpendicular to the (111) direction in the unit cell and</li>
+  <li>situated within ≈1.5 Å of one of the oxygen atoms defining the planar region.</li>
+</ul>
+
+<p>The figure below show the O(111) site predicted by the UEP method:</p>
+
+<p><img src="/images/fe3o4_muon_1.jpg" width="250" height="250" /></p>
+
+<p>And this other figure below shows an example of a planar region, perpendicular to the (111) direction, which is indicated in yellow:</p>
+
+<p><img src="/images/fe3o4_muon_2-plane.jpg" width="250" height="250" /></p>
+
+<p>The muon is located at ≈1.3 Å from its closest oxygen atom in this planar region.  A detailed description of the input and output files, resulting 
+from the application of the UEP method to Fe<sub>3</sub>O<sub>4</sub>, is in this <a href="/tutorial-folder/supplement.pdf">document</a>.</p>
+
+
+
+      </section>
+      <footer>
+        
+        <p><small>Hosted on GitHub Pages &mdash; Theme by <a href="https://github.com/orderedlist">orderedlist</a></small></p>
+      </footer>
+    </div>
+    <script src="/assets/js/scale.fix.js"></script>
+
+
+  
+  </body>
+</html>
