@@ -11,7 +11,7 @@ Python package, but they also make use of other Python libraries, such as the
 `pymuon-suite` was deployed specifically to aid muon computational science: is a library that can be
 found on Github and is released under a GNU v3.0 open source license. Once installed, `pymuon-suite` 
 provides the user both with a Python API to use for custom programs and with a series of pre-packaged
-scripts that can be used to interpret some of the most coomon muon experiments. 
+scripts that can be used to interpret some of the most common muon experiments. 
 
 Some tutorials require at least a working knowledge of Python, others don't.
 We will keep the tutorials classified depending on the skills that they
