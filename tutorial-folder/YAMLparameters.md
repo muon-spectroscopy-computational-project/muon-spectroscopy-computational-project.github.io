@@ -1,6 +1,6 @@
 ### Parameters used in the YAML input files 
 
-Here, we list the keywords for the input files of the `pymuon- suite` scripts `pm-muairss`, `pm-uep-opt` and `pm-uep-plot`.
+Here, we list the keywords for the input files of the `pymuon-suite` scripts `pm-muairss`, `pm-uep-opt` and `pm-uep-plot`.
 These keywords must be included in a file written in the YAML format, which is just a plain text file with rows written in
 the format `<keyword>: <value>`
 
@@ -30,7 +30,9 @@ See the documentation for the options. DEFAULT: trust-exact TYPE: string;
 * **particle_mass:** mass of the particle, in kg. Important for zero point energy estimation. By default, it is the mass of the muon. 
 DEFAULT: 1.884E-28 TYPE: float; 
 
-* **save_pickle:** If True,save the output result in a pickled file for further reading and reusing with other Python scripts. DEFAULT: true TYPE: boolean.
+* **save_pickle:** if True, save the output result in a pickled file for further reading and reusing with other Python scripts. DEFAULT: true TYPE: boolean;
+
+* **save_structs**: if True, saves .xyz file for all structures + muon optimised with UEP. DEFAULT: true, TYPE: boolean.
  
 #### Unperturbed electrostatic potential plotting: `pm-uep-plot`
 
@@ -69,6 +71,8 @@ Here are listed all the keywords used to run the `pm-muairss` script. Words that
 
 * **uep_gw_factor:** Gaussian width factor used to define the size of the ionic charges by scaling the pseudopotential radius. DEFAULT: 5.0 TYPE: float;
 
+* **uep_save_structs:** if True, saves an .xyz file for all structures + muon when running UEP. DEFAULT: True TYPE: bool;
+
 * **vdw_scale:** scale factor to multiply the standard van der Waals radius of each atom in the system, used to determine the minimum distance allowed between a muon and other atoms. Bigger values will evacuate a larger sphere around the existing atoms. DEFAULT: 0.5 TYPE: float;
 
 * **charged:** determines whether the implanted muons will be charged or neutral. Must be True to use UEP. DEFAULT: false TYPE: boolean;
@@ -81,15 +85,19 @@ Here are listed all the keywords used to run the `pm-muairss` script. Words that
 
 * **geom_force_tol:** force tolerance for each geometry optimization in eV/Å. DEFAULT: 0.05 TYPE: float;
 
+* **allpos_filename:** if this is set, a structure file is generated which contains all of the initial muon positions in the structure, as a result of the pm-muairss structure generation. This parameter sets the name of the file, and must include an appropriate file extension (e.g. .cell, .xyz). DEFAULT: None, TYPE: string;
+
 * **clustering_method:** clustering method to use to process results. The options are `hier` (for hierarchical clustering) and `kmeans` (for k-means clustering). DEFAULT: hier TYPE: string;
 
 * **clustering_hier_t:** normalized **t** parameter for hierarchical clustering. Higher **t** will produce a smaller number of bigger clusters. DEFAULT: 0.3 TYPE: float;
 
 * **clustering_kmeans_k:** expected number of clusters for k-means clustering. DEFAULT: 4 TYPE: int;
 
-* **clustering_save_min:** If True, save the minimum energy structure for each cluster as a separate file. DEFAULT: false TYPE: boolean;
+* **clustering_save_type:** 'structures' or 'input' - for selecting whether to save structure files or input files to another calculator, for the minimum energy structure in each cluster. DEFAULT: None, TYPE: string;
 
-* **clustering_save_format:** extension of file format in which to save the minimum energy structures if **clustering_save_min** is True. DEFAULT: .cif TYPE: string;
+* **clustering_save_format:** if 'clustering_save_type' is set to 'structures', this takes an extension (e.g. cif, xyz, etc.) of file format to save the minimum energy structures. If 'clustering_save_type' is set to 'input', this takes the name of a calculator (castep, dftb, etc.), to generate the input files for. DEFAULT: None, TYPE: string;
+
+* **clustering_save_folder:** Name to call the folder used to store the data specified by 'clustering_save_format' (either structure files or input files to a calculator). DEFAULT: ./{name}_clusters, TYPE: string; 
 
 * **castep_command:** command used to run the CASTEP executable on the system. DEFAULT: castep.serial TYPE: string;
 
