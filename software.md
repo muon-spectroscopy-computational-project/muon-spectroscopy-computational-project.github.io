@@ -30,6 +30,6 @@ stopping site.
 DFTB+ is a fast, efficient and versatile quantum mechanical simulation software package.
 Using DFTB+ you can carry out quantum mechanical simulations whose precision is similar 
 to those of density functional theory, but which are typically around two orders of magnitude faster 
-than DFT simulations. `pymuno-suite` uses DFTB+ simulations specially to treat crystalline 
+than DFT simulations. `pymuon-suite` uses DFTB+ simulations specially to treat crystalline 
 organic systems.
 
