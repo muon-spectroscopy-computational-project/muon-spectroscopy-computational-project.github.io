@@ -7,7 +7,7 @@
 * **Laura Murgatroyd**: *[laura.murgatroyd@stfc.ac.uk](mailto:laura.murgatroyd@stfc.ac.uk)*
 * **Eli Chadwick**: *[eli.chadwick@stfc.ac.uk](mailto:eli.chadwick@stfc.ac.uk)* 
 
-#### Software Engineering Group
+#### Data and Software Engineering Group
 
 * **Alejandra Gozalez-Beltran**: *[alejandra.gonzalez-beltran@stfc.ac.uk](mailto:alejandra.gonzalez-beltran@stfc.ac.uk)*
 * **Louise Davies**: *[louise.davies@stfc.ac.uk](mailto:louise.davies@stfc.ac.uk)* 
