@@ -4,12 +4,15 @@
 
 * **[Leandro Liborio](https://leandro-liborio.github.io/)**: *[leandro.liborio@stfc.ac.uk](mailto:leandro.liborio@stfc.ac.uk)*
 * **Eli Chadwick**: *[eli.chadwick@stfc.ac.uk](mailto:eli.chadwick@stfc.ac.uk)* 
-* **Anish Mudaraddi**: *[anish.mudaraddi@stfc.ac.uk](mailto:anish.mudaraddi@stfc.ac.uk)* 
+* **Martin Plummer**: *[martin.plummer@stfc.ac.uk](mailto:martin.plummer@stfc.ac.uk)* 
+* **Joel Davies**: *[joel.davies@stfc.ac.uk](mailto:joel.davies@stfc.ac.uk)* 
+
 
 #### Data and Software Engineering Group
 
 * **Alejandra Gonzalez-Beltran**: *[alejandra.gonzalez-beltran@stfc.ac.uk](mailto:alejandra.gonzalez-beltran@stfc.ac.uk)*
-* **Louise Davies**: *[louise.davies@stfc.ac.uk](mailto:louise.davies@stfc.ac.uk)* 
+* **Patrick Austin**: *[patrick.austin@stfc.ac.uk](mailto:patrick.austin@stfc.ac.uk)* 
+
 
 ### ISIS
 
@@ -17,6 +20,7 @@
 
 * **Francis Pratt**
 * **Stephen Cottrell**
+* **John Wilkinson**
 
 ### Former Members
 
@@ -27,3 +31,5 @@
 * **Josh Owen** (Scientific Computing Department)
 * **Jyothish Thomas** (Scientific Computing Department)
 * **Simone Sturniolo** (Scientific Computing Department)
+* **Louise Davies** (Scientific Computing Department)  
+* **Anish Mudaraddi** (Scientific Computing Department) 
