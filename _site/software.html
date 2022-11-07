@@ -16,11 +16,11 @@
 <meta property="og:url" content="http://localhost:4000/software.html" />
 <meta property="og:site_name" content="The Muon Spectroscopy Computational Project" />
 <script type="application/ld+json">
-{"@type":"WebPage","publisher":null,"headline":"Software","dateModified":null,"datePublished":null,"sameAs":null,"url":"http://localhost:4000/software.html","author":null,"mainEntityOfPage":null,"image":null,"description":"Software and methods to make the muon spectroscopist’s life easier","name":null,"@context":"http://schema.org"}</script>
+{"@type":"WebPage","image":null,"publisher":null,"headline":"Software","dateModified":null,"datePublished":null,"sameAs":null,"mainEntityOfPage":null,"author":null,"description":"Software and methods to make the muon spectroscopist’s life easier","url":"http://localhost:4000/software.html","name":null,"@context":"http://schema.org"}</script>
 <!-- End Jekyll SEO tag -->
 
 
-    <link rel="stylesheet" href="/assets/css/style.css?v=67b424d9a4e3483433ccd324e139812b82ae7070">
+    <link rel="stylesheet" href="/assets/css/style.css?v=645d48f381549f23b98b96071753d383dcd21bc5">
     <meta name="viewport" content="width=device-width">
     <!--[if lt IE 9]>
     <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
@@ -55,8 +55,31 @@
 
       <h3 id="software">Software</h3>
 
-<p>The Muon Spectroscopy Computational Project (MSCP) uses a wide range of software 
-packages that allow us to develop our tools. Below, there is a list of 
+<p>The MSCP develops a number of tools and packages for tackling computational challenges in muon spectroscopy. 
+Here are the projects currently developed by the MSCP:</p>
+
+<ul>
+  <li>
+    <p><strong><a href="https://github.com/muon-spectroscopy-computational-project/pymuon-suite">pymuon-suite</a></strong>: A collection of scripts and utilities for muon spectroscopy, containing command line tools to use alongside DFT (Density Functional Theory) simulations. These tools can be used to identify the muon stopping site(s) in a system, compute phonons, and estimate quantum effects involving the muon. The tools support external software including CASTEP and DFTB+ for performing calculations.</p>
+  </li>
+  <li>
+    <p><strong><a href="https://github.com/muon-spectroscopy-computational-project/muspinsim">muspinsim</a></strong>: A package for simulating muon spectroscopy experiments. In particular, it simulates the spin dynamics of a system of a muon plus other spins, namely electrons and atomic nuclei. It can simulate various common experimental setups and account for hyperfine, dipolar and quadrupolar couplings. It is also able to fit its simulations to experimental data, to find the optimal parameters that describe it.</p>
+  </li>
+  <li>
+    <p><strong><a href="https://github.com/muon-spectroscopy-computational-project/mudirac">mudirac</a></strong>: A muonic atom Dirac equation solver.</p>
+  </li>
+  <li>
+    <p><strong><a href="https://muongalaxy.stfc.ac.uk/">Muon Galaxy</a></strong>: An open-source web platform for FAIR data analysis in muon science.
+It provides a GUI for our other tools and allows users to build reproducible analysis workflows and share data and results,
+without any need for prior programming experience. 
+Based on the <a href="https://galaxyproject.org">Galaxy platform</a>.</p>
+  </li>
+</ul>
+
+<h4 id="external-software">External Software</h4>
+
+<p>The Muon Spectroscopy Computational Project (MSCP) depends on and interfaces with a wide 
+range of external software. Below, there is a list of 
 some of the software packages currently in use by the MSCP:</p>
 
 <ul>
@@ -90,11 +113,17 @@ stopping site.</p>
 DFTB+ is a fast, efficient and versatile quantum mechanical simulation software package.
 Using DFTB+ you can carry out quantum mechanical simulations whose precision is similar 
 to those of density functional theory, but which are typically around two orders of magnitude faster 
-than DFT simulations. <code class="highlighter-rouge">pymuno-suite</code> uses DFTB+ simulations specially to treat crystalline 
+than DFT simulations. <code class="highlighter-rouge">pymuon-suite</code> uses DFTB+ simulations specially to treat crystalline 
 organic systems.</p>
   </li>
+  <li>
+    <p><strong><a href="https://galaxyproject.org">Galaxy</a></strong>: an open-source platform for FAIR data analysis that enables users to:
+use tools (that can be plugged into workflows) through its graphical web interface; 
+run code in interactive environments (RStudio, Jupyter…);
+manage data by sharing and publishing results, workflows, and visualizations; and
+ensure reproducibility by capturing the necessary information to repeat and understand data analyses.</p>
+  </li>
 </ul>
-
 
 
       </section>

@@ -21,7 +21,9 @@ this could be a good point to start!
 
 #### Basics
 
-* [Installing `pymuon-suite`](tutorial-folder/installing)
+* [Python setup](tutorial-folder/python-setup)
+* [Installing `pymuon-suite`](tutorial-folder/installing-pymuon-suite)
+* [Installing `muspinsim`](tutorial-folder/installing-muspinsim)
 
 #### Simulating Nuclear Quantum Effects
 

@@ -16,11 +16,11 @@
 <meta property="og:url" content="http://localhost:4000/tutorial-folder/YAMLparameters.html" />
 <meta property="og:site_name" content="The Muon Spectroscopy Computational Project" />
 <script type="application/ld+json">
-{"@type":"WebPage","publisher":null,"headline":"Parameters used in the YAML input files","dateModified":null,"datePublished":null,"sameAs":null,"url":"http://localhost:4000/tutorial-folder/YAMLparameters.html","author":null,"mainEntityOfPage":null,"image":null,"description":"Software and methods to make the muon spectroscopist’s life easier","name":null,"@context":"http://schema.org"}</script>
+{"@type":"WebPage","image":null,"publisher":null,"headline":"Parameters used in the YAML input files","dateModified":null,"datePublished":null,"sameAs":null,"mainEntityOfPage":null,"author":null,"description":"Software and methods to make the muon spectroscopist’s life easier","url":"http://localhost:4000/tutorial-folder/YAMLparameters.html","name":null,"@context":"http://schema.org"}</script>
 <!-- End Jekyll SEO tag -->
 
 
-    <link rel="stylesheet" href="/assets/css/style.css?v=67b424d9a4e3483433ccd324e139812b82ae7070">
+    <link rel="stylesheet" href="/assets/css/style.css?v=645d48f381549f23b98b96071753d383dcd21bc5">
     <meta name="viewport" content="width=device-width">
     <!--[if lt IE 9]>
     <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
@@ -55,7 +55,7 @@
 
       <h3 id="parameters-used-in-the-yaml-input-files">Parameters used in the YAML input files</h3>
 
-<p>Here, we list the keywords for the input files of the <code class="highlighter-rouge">pymuon- suite</code> scripts <code class="highlighter-rouge">pm-muairss</code>, <code class="highlighter-rouge">pm-uep-opt</code> and <code class="highlighter-rouge">pm-uep-plot</code>.
+<p>Here, we list the keywords for the input files of the <code class="highlighter-rouge">pymuon-suite</code> scripts <code class="highlighter-rouge">pm-muairss</code>, <code class="highlighter-rouge">pm-uep-opt</code> and <code class="highlighter-rouge">pm-uep-plot</code>.
 These keywords must be included in a file written in the YAML format, which is just a plain text file with rows written in
 the format <code class="highlighter-rouge">&lt;keyword&gt;: &lt;value&gt;</code></p>
 
@@ -95,7 +95,10 @@ See the documentation for the options. DEFAULT: trust-exact TYPE: string;</p>
 DEFAULT: 1.884E-28 TYPE: float;</p>
   </li>
   <li>
-    <p><strong>save_pickle:</strong> If True,save the output result in a pickled file for further reading and reusing with other Python scripts. DEFAULT: true TYPE: boolean.</p>
+    <p><strong>save_pickle:</strong> if True, save the output result in a pickled file for further reading and reusing with other Python scripts. DEFAULT: true TYPE: boolean;</p>
+  </li>
+  <li>
+    <p><strong>save_structs</strong>: if True, saves .xyz file for all structures + muon optimised with UEP. DEFAULT: true, TYPE: boolean.</p>
   </li>
 </ul>
 
@@ -159,6 +162,9 @@ having the vector connecting atoms 0 and 1 as base, the vector connecting atoms 
     <p><strong>uep_gw_factor:</strong> Gaussian width factor used to define the size of the ionic charges by scaling the pseudopotential radius. DEFAULT: 5.0 TYPE: float;</p>
   </li>
   <li>
+    <p><strong>uep_save_structs:</strong> if True, saves an .xyz file for all structures + muon when running UEP. DEFAULT: True TYPE: bool;</p>
+  </li>
+  <li>
     <p><strong>vdw_scale:</strong> scale factor to multiply the standard van der Waals radius of each atom in the system, used to determine the minimum distance allowed between a muon and other atoms. Bigger values will evacuate a larger sphere around the existing atoms. DEFAULT: 0.5 TYPE: float;</p>
   </li>
   <li>
@@ -177,6 +183,9 @@ having the vector connecting atoms 0 and 1 as base, the vector connecting atoms 
     <p><strong>geom_force_tol:</strong> force tolerance for each geometry optimization in eV/Å. DEFAULT: 0.05 TYPE: float;</p>
   </li>
   <li>
+    <p><strong>allpos_filename:</strong> if this is set, a structure file is generated which contains all of the initial muon positions in the structure, as a result of the pm-muairss structure generation. This parameter sets the name of the file, and must include an appropriate file extension (e.g. .cell, .xyz). DEFAULT: None, TYPE: string;</p>
+  </li>
+  <li>
     <p><strong>clustering_method:</strong> clustering method to use to process results. The options are <code class="highlighter-rouge">hier</code> (for hierarchical clustering) and <code class="highlighter-rouge">kmeans</code> (for k-means clustering). DEFAULT: hier TYPE: string;</p>
   </li>
   <li>
@@ -186,10 +195,13 @@ having the vector connecting atoms 0 and 1 as base, the vector connecting atoms 
     <p><strong>clustering_kmeans_k:</strong> expected number of clusters for k-means clustering. DEFAULT: 4 TYPE: int;</p>
   </li>
   <li>
-    <p><strong>clustering_save_min:</strong> If True, save the minimum energy structure for each cluster as a separate file. DEFAULT: false TYPE: boolean;</p>
+    <p><strong>clustering_save_type:</strong> ‘structures’ or ‘input’ - for selecting whether to save structure files or input files to another calculator, for the minimum energy structure in each cluster. DEFAULT: None, TYPE: string;</p>
   </li>
   <li>
-    <p><strong>clustering_save_format:</strong> extension of file format in which to save the minimum energy structures if <strong>clustering_save_min</strong> is True. DEFAULT: .cif TYPE: string;</p>
+    <p><strong>clustering_save_format:</strong> if ‘clustering_save_type’ is set to ‘structures’, this takes an extension (e.g. cif, xyz, etc.) of file format to save the minimum energy structures. If ‘clustering_save_type’ is set to ‘input’, this takes the name of a calculator (castep, dftb, etc.), to generate the input files for. DEFAULT: None, TYPE: string;</p>
+  </li>
+  <li>
+    <p><strong>clustering_save_folder:</strong> Name to call the folder used to store the data specified by ‘clustering_save_format’ (either structure files or input files to a calculator). DEFAULT: ./{name}_clusters, TYPE: string;</p>
   </li>
   <li>
     <p><strong>castep_command:</strong> command used to run the CASTEP executable on the system. DEFAULT: castep.serial TYPE: string;</p>

@@ -1,0 +1,123 @@
+<!doctype html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+
+    <title>The Muon Spectroscopy Computational Project</title>
+
+<!-- Begin Jekyll SEO tag v2.3.0 -->
+<title>Installing muspinsim | The Muon Spectroscopy Computational Project</title>
+<meta property="og:title" content="Installing muspinsim" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Software and methods to make the muon spectroscopist’s life easier" />
+<meta property="og:description" content="Software and methods to make the muon spectroscopist’s life easier" />
+<link rel="canonical" href="http://localhost:4000/tutorial-folder/installing-muspinsim.html" />
+<meta property="og:url" content="http://localhost:4000/tutorial-folder/installing-muspinsim.html" />
+<meta property="og:site_name" content="The Muon Spectroscopy Computational Project" />
+<script type="application/ld+json">
+{"@type":"WebPage","image":null,"publisher":null,"headline":"Installing muspinsim","dateModified":null,"datePublished":null,"sameAs":null,"mainEntityOfPage":null,"author":null,"description":"Software and methods to make the muon spectroscopist’s life easier","url":"http://localhost:4000/tutorial-folder/installing-muspinsim.html","name":null,"@context":"http://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+
+
+    <link rel="stylesheet" href="/assets/css/style.css?v=645d48f381549f23b98b96071753d383dcd21bc5">
+    <meta name="viewport" content="width=device-width">
+    <!--[if lt IE 9]>
+    <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+
+    <!-- MathJax support -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-AMS-MML_HTMLorMML" type="text/javascript"></script>
+  </head>
+  <body>
+    <div class="wrapper">
+      <header>
+        <h1><a href="/index.html" >The Muon Spectroscopy Computational Project</a></h1>
+        <p>Software and methods to make the muon spectroscopist's life easier</p>
+
+        <p>
+          <h3><a href="/people.html">People</a></h3>
+          <h3><a href="/pubs.html">Publications</a></h3>
+          <h3><a href="/tutorials.html">Tutorials</a></h3>
+          <h3><a href="/software.html">Software</a></h3>
+          <h3><a href="/muons.html">Ada Lovelace Muon Project</a></h3>
+        </p>
+
+        
+
+        
+          <p class="view"><a href="http://github.com/muon-spectroscopy-computational-project">View Organization on Github</a></p>
+        
+
+        
+      </header>
+      <section>
+
+      <h3 id="installing-muspinsim">Installing <code class="highlighter-rouge">muspinsim</code></h3>
+
+<p>In this tutorial we’ll go through the best ways to install MuSpinSim on
+any system of your interest, so that you can use it for the other exercises.</p>
+
+<p>The first step is, of course, procuring Python itself. If you have not already
+done this, see the <a href="./python-setup">tutorial here</a>.</p>
+
+<h4 id="dependencies">Dependencies</h4>
+
+<p><code class="highlighter-rouge">pip</code> will take care of installing all of the dependencies (other packages
+that <code class="highlighter-rouge">muspinsim</code> needs to run). Just follow the instructions below.</p>
+
+<h4 id="installing-muspinsim-1">Installing MuSpinSim</h4>
+
+<p>Granted that you already have Python and <code class="highlighter-rouge">pip</code> installed on your system, and a
+command line ready to use, then installing <code class="highlighter-rouge">muspinsim</code> is easy using</p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>pip install muspinsim <span class="nt">--user</span>
+</code></pre></div></div>
+<p>or if you are using Anaconda, you may also use</p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>conda install muspinsim
+</code></pre></div></div>
+
+<p>and you’ll be ready to go.</p>
+
+<p>Alternatively if you wish to install from source, you may to get the package from
+GitHub in one of two ways. If you have <code class="highlighter-rouge">git</code> installed and are familiar with its
+use you can simply clone the repository:</p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>git clone https://github.com/muon-spectroscopy-computational-project/muspinsim.git
+</code></pre></div></div>
+
+<p>Otherwise, you can download it as a 
+<a href="https://github.com/muon-spectroscopy-computational-project/muspinsim/archive/master.zip">zip file</a>
+and unzip it in a folder of your choice.</p>
+
+<p>To install the downloaded source, navigate to the parent directory in your
+terminal. If you don’t know how to do it,
+<a href="http://linuxcommand.org/lc3_lts0020.php">here’s a handy guide for Linux and MacOS</a>.
+and <a href="http://dosprompt.info/basics.asp">here’s one for Windows</a>, which has a 
+different syntax.</p>
+
+<p>Once you are in the directory <em>above</em> the unzipped/cloned package, you can run:</p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>pip install ./<span class="o">{</span>package<span class="o">}</span> <span class="nt">--user</span>
+</code></pre></div></div>
+
+<p>where <code class="highlighter-rouge">{package}</code> represents the name of the directory where you unzipped/cloned
+the package. In your case, if you didn’t rename the unzipped directory, it should be:</p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>pip install ./muspinsim <span class="nt">--user</span>
+</code></pre></div></div>
+
+
+      </section>
+      <footer>
+        
+        <p><small>Hosted on GitHub Pages &mdash; Theme by <a href="https://github.com/orderedlist">orderedlist</a></small></p>
+      </footer>
+    </div>
+    <script src="/assets/js/scale.fix.js"></script>
+
+
+  
+  </body>
+</html>
