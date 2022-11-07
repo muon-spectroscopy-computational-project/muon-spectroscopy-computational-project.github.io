@@ -37,4 +37,6 @@ this could be a good point to start!
 #### Negative Muons 
 * [Prediction of frequencies and probabilities of transition between energy levels of muonic atoms](tutorial-folder/muDirac)
 
+#### Simulating Muon Spectroscopy Experiments with MuSpinSim
+* [MuSpinSim usage tutorial](./muspinsim/tutorial)
 
