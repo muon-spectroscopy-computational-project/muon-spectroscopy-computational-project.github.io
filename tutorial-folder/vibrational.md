@@ -71,6 +71,10 @@ In order to use the vibrational averaging function, a YAML format parameter file
 
   Default: 20
 
+* sigma_n: Number of sigma to sample up to when using the independent method.
+
+  Default: 3
+
 * k_points_grid: List of three integer k-points for both phonon and hyperfine calculations.
 
   Default: [1,1,1]
