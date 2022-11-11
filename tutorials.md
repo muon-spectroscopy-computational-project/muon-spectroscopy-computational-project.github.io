@@ -25,7 +25,7 @@ this could be a good point to start!
 * [Installing `pymuon-suite`](tutorial-folder/installing-pymuon-suite)
 * [Installing `muspinsim`](tutorial-folder/installing-muspinsim)
 
-#### Simulating Nuclear Quantum Effects
+#### Nuclear Quantum Effects
 
 * [Performing vibrational averaging calculations](tutorial-folder/vibrational)
 
