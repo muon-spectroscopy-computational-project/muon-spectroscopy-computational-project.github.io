@@ -23,7 +23,7 @@ this could be a good point to start!
 
 * [Python setup](tutorial-folder/python-setup)
 * [Installing `pymuon-suite`](tutorial-folder/installing-pymuon-suite)
-* [Installing `muspinsim`](tutorial-folder/installing-muspinsim)
+* [Installing `muspinsim`](muspinsim/installation/)
 
 #### Nuclear Quantum Effects
 
@@ -38,5 +38,5 @@ this could be a good point to start!
 * [Prediction of frequencies and probabilities of transition between energy levels of muonic atoms](tutorial-folder/muDirac)
 
 #### Simulating Muon Spectroscopy Experiments with MuSpinSim
-* [MuSpinSim usage tutorial](./muspinsim/tutorial)
+* [MuSpinSim usage tutorial](muspinsim/tutorial)
 
