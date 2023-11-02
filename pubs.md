@@ -17,7 +17,7 @@ Expanding on our previous use of AIRSS to find the muon stopping site, this pape
 Phenylacetylene-capped silicon nanoparticles have attracted interest as a novel thermoelectric material. In this paper, we report a combined muon spectroscopic (μSR) and computational study of this material in solution to investigate the microscopic electronic structure of this system.
 
 * [Computational prediction of muon stopping sites: A novel take on the unperturbed electrostatic potential method](https://aip.scitation.org/doi/10.1063/5.0012381)\
-**_The Journal of Chemical Physics, 153, 044111 (2020)_**\
+**_The Journal of Chemical Physics, 153, 044111, (2020)_**\
 In this work, we present a software implementation of the Unperturbed Electrostatic Potential (UEP) Method: an approach used for finding the muon stopping site in crystalline materials. The UEP method requires only one DFT calculation, necessary to compute the electronic density of the host material. 
 
 * [Mudirac: A Dirac equation solver for elemental analysis with muonic X‐rays](https://onlinelibrary.wiley.com/doi/full/10.1002/xrs.3212)\
@@ -29,9 +29,16 @@ In this work, we present mudirac: a new open‐source software for the integrati
 Here, we give evidence for the detection of a muonium state that propagates in a molecular semiconductor lattice via thermally activated dynamics: a muonium polaron. 
 
 * [Low-temperature magnetic crossover in the topological kagome magnet TbMn6Sn6](https://www.nature.com/articles/s42005-022-00885-4)\
-**_Communications Physics volume 5, Article number: 107 (2022)_**\
+**_Communications Physics volume 5, Article number: 107, (2022)_**\
 Here, we explore magnetic correlations in the recently identified topological kagome system TbMn6Sn6 using muon spin rotation, combined with local field analysis and neutron diffraction. Our studies identify an out-of-plane ferrimagnetic structure with slow magnetic fluctuations which exhibit a critical slowing down below T<sup>*</sup>C1 ≃ 120 K and finally freeze into static patches with ideal out-of-plane order below TC1 ≃ 20 K.
 
+* [MuSpinSim: spin dynamics calculations for muon science](https://iopscience.iop.org/article/10.1088/1742-6596/2462/1/012017/meta)\
+**_J. Phys.: Conf. Ser. 2462 012017, (2023)_**\
+In this work, we present muspinsim: an open-source python package to simulate the spin dynamics of a system of a muon along with other spins such as electrons and atomic nuclei. All of its utilities to facilitate µSR experiments are also detailed.
+
+* [Magnetic structure and crystal field states of Pr2Pd3Ge5 : μSR and neutron scattering investigations](https://journals.aps.org/prb/abstract/10.1103/PhysRevB.107.104412)\
+**_Phys.Rev.B 107,104412, (2023)_**\
+Summary
 
 ### Selected Presentations
 
@@ -40,8 +47,7 @@ Here, we explore magnetic correlations in the recently identified topological ka
 This work focuses on the paramagnetic states formed by muons in semiconductors. In particular, it revisits the case of muons in pure Si, and uses a combination of computational methods to estimate the muon stopping sites.
 
 * [Computer Simulations for Interpreting µSR Experiments: Beyond DFT](https://leandro-liborio.github.io/files/MuonStoppingSite2018.pdf)\
-  **_Muon Spectroscopy User Meeting: Future Developments and Site Calculations.
-   17 July 2018, The Cosener’s House, Abingdon, UK._**\
+**_Muon Spectroscopy User Meeting: Future Developments and Site Calculations. 17 July 2018, The Cosener’s House, Abingdon, UK._**\
 This presentation discusses the computational methods that we had developed so far to estimate the muon stopping site in crystalline materials. The key new concept is the development of methods based on calculations other than ab-initio calculations. The idea is that the new calculations are computationally faster than the purely ab initio ones. One of the methods that I have tested is the DFT-based Tight-Binding.
 
 * [CalcALC: a user tool for predicting and interpreting ALC and QLCR spectra](https://www.isis.stfc.ac.uk/Pages/MuonUserMeeting2018_Pratt.pdf)\
@@ -79,6 +85,21 @@ In this talk, we presented a full version of Muon Galaxy and stressed its capabi
 **_NOBUGS 2022. 19th-22th September, 2022._**\
 The goal of the NOBUGS (New Opportunities for Better User Group Software) Conference Series is to foster collaboration and exchange between scientists and IT professionals working on software for X-ray, neutron and muon sources from around the world.  We presented Muon Galaxy to this community.
 
+* [Galaxy and Scientific Communities: How to Incorporate New Ones, Uplift Engaged Ones and Maintain Mature Ones​](https://pasc23.pasc-conference.org/)\
+**_THE PASC23 CONFERENCE 2023. 26th-28th June, 2023._**\
+The goal of the Platform for Advanced Scientific Computing (PASC) Conference for 2023 focusses on advances in aggregating, synthesizing, and transitioning across scales, domains, and communities. We presented the capabilites of the Galaxy platform and its specific use in Muon Science and Astrophysics.
+
+* [Computing Simulations for Large Scale Experiments: the Case of Muons​](https://zenodo.org/records/8161368)\
+**_Presentation to the Catalysis Hub. 18th July, 2023, Harwell, UK._**\ 
+
+* [Computational Techniques to Support Muon Science: the Muon Spectroscopy Computational Project at ISIS](https://zenodo.org/records/8219390)\
+**_Japan Proton Accelerator Research Complex (J-PARC). 4th August, 2023._**\ 
+
+* [Finding the Muon Stopping Site: pymuon-suite in​ Galaxy​](https://indico.stfc.ac.uk/event/757/)\
+**_Muon User Meeting 2023: celebrating the work of Pabitra Biswas. 11th-12th September, 2023,  The Queens College, Oxford, UK._**\
+
+* [Applications to Catalysis Workflows​](https://zenodo.org/records/8219401)\
+**_European Galaxy Days (EGD). 4th-6th October, 2023,  Freiburg, Germany._**\
 
 
 
