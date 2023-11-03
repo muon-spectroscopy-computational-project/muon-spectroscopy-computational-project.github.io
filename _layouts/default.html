@@ -3,8 +3,9 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="chrome=1">
-
+    
     <title>{{ site.title }}</title>
+    <link rel="icon" type="image/x-icon" href="/images/favicon.ico">
 
 {% seo %}
 
@@ -22,13 +23,17 @@
       <header>
         <h1><a href="{{'index.html' | relative_url }}" >{{ site.title | default: site.github.repository_name }}</a></h1>
         <p>{{ site.description | default: site.github.project_tagline }}</p>
-
+        
+        {% if site.logo %}
+          <img src="{{site.logo | relative_url}}" alt="Logo" style="  display: block;width: 50%;"/>
+        {% endif %}
+        
         <p>
           <h3><a href="{{'people.html' | relative_url }}">People</a></h3>
           <h3><a href="{{'pubs.html' | relative_url }}">Publications</a></h3>
           <h3><a href="{{'tutorials.html' | relative_url }}">Tutorials</a></h3>
           <h3><a href="{{'software.html' | relative_url }}">Software</a></h3>
-          <h3><a href="{{'muons.html' | relative_url }}">Ada Lovelace Muon Project</a></h3>
+          <h3><a href="{{'funding.html' | relative_url }}">Funding</a></h3>
         </p>
 
         {% if site.github.is_project_page %}
@@ -52,12 +57,12 @@
       {{ content }}
 
       </section>
-      <footer>
+      <section>
         {% if site.github.is_project_page %}
         <p>This project is maintained by <a href="{{ site.github.owner_url }}">{{ site.github.owner_name }}</a></p>
         {% endif %}
         <p><small>Hosted on GitHub Pages &mdash; Theme by <a href="https://github.com/orderedlist">orderedlist</a></small></p>
-      </footer>
+      </section>
     </div>
     <script src="{{ '/assets/js/scale.fix.js' | relative_url }}"></script>
 

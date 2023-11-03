@@ -2,11 +2,11 @@
 
 #### Theoretical and Computational Physics Group
 
-* **[Leandro Liborio](https://leandro-liborio.github.io/)**: *[leandro.liborio@stfc.ac.uk](mailto:leandro.liborio@stfc.ac.uk)*
-* **Eli Chadwick**: *[eli.chadwick@stfc.ac.uk](mailto:eli.chadwick@stfc.ac.uk)* 
-* **Martin Plummer**: *[martin.plummer@stfc.ac.uk](mailto:martin.plummer@stfc.ac.uk)* 
-* **Joel Davies**: *[joel.davies@stfc.ac.uk](mailto:joel.davies@stfc.ac.uk)* 
-
+* **[Leandro Liborio](https://leandro-liborio.github.io/)**: *[leandro.liborio@stfc.ac.uk](mailto:leandro.liborio@stfc.ac.uk)* 
+* **Martin Plummer**: *[martin.plummer@stfc.ac.uk](mailto:martin.plummer@stfc.ac.uk)*  
+* **Maitrayee Singh**: *[maitrayee.singh@stfc.ac.uk](mailto:maitrayee.singh@stfc.ac.uk)* 
+* **Nalin Gupta**: *[nalin.gupta@stfc.ac.uk](mailto:nalin.gupta@stfc.ac.uk)* 
+* **Subindev Devadasan**: *[subindev.devadasan@stfc.ac.uk](mailto:subindev.devadasan@stfc.ac.uk)* 
 
 #### Data and Software Engineering Group
 
@@ -30,6 +30,8 @@
 * **Sarah Byrne** (Scientific Computing Department)
 * **Josh Owen** (Scientific Computing Department)
 * **Jyothish Thomas** (Scientific Computing Department)
-* **Simone Sturniolo** (Scientific Computing Department)
 * **Louise Davies** (Scientific Computing Department)  
 * **Anish Mudaraddi** (Scientific Computing Department) 
+* **Joel Davies** (Scientific Computing Department)
+* **Simone Sturniolo** (CoMind)
+* **Eli Chadwick** (The Carpentries)

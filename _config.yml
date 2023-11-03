@@ -1,5 +1,6 @@
 theme: jekyll-theme-minimal
 title: "The Muon Spectroscopy Computational Project"
+logo: /images/logo.png
 description: "Software and methods to make the muon spectroscopist's life easier"
 show_downloads: false
 github:

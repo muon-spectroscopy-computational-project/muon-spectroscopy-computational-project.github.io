@@ -1,4 +1,4 @@
-### Ada Lovelace Project on Muon Spectroscopy  
+### Funding 
 
 The Ada Lovelace Centre (ALC) is a cross-disciplinary and data intensive science centre, which has been established to improve the exploitation of the research that is carried out at the large scale National Facilities of the UK, such as the Rutherford Appleton Lab.  The idea of the ALC is that the research at those facilities can be improved through a combination of data processing, computer simulations and data analytics. To support this idea, the ALC offer grants and our Project on Muon spectroscopy won a 2-year grant, that started in April 2020, and whose objective is the development of sustainable and easy to use software tools for the interpretation of muon experiments.  
 
