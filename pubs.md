@@ -38,7 +38,6 @@ In this work, we present muspinsim: an open-source python package to simulate th
 
 * [Magnetic structure and crystal field states of Pr2Pd3Ge5 : μSR and neutron scattering investigations](https://journals.aps.org/prb/abstract/10.1103/PhysRevB.107.104412)\
 **_Phys.Rev.B 107,104412, (2023)_**\
-Summary
 
 ### Selected Presentations
 
@@ -101,5 +100,10 @@ The goal of the Platform for Advanced Scientific Computing (PASC) Conference for
 * [Applications to Catalysis Workflows​](https://zenodo.org/records/8219401)\
 **_European Galaxy Days (EGD). 4th-6th October, 2023,  Freiburg, Germany._**\
 
+* [Galaxy workflow tools for processing and analysis of catalysis data (Short Lecture)​](https://zenodo.org/records/10079823)\
+**_Presentation to the Catalysis Hub. 2nd November, 2023, Harwell, UK._**\
+
+* [Galaxy workflow tools for processing and analysis of catalysis data (Flash Pitch)](https://zenodo.org/records/10076825)\
+**_Presentation to the Catalysis Hub. 2nd November, 2023, Harwell, UK._**\
 
 
