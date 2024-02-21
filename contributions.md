@@ -55,7 +55,8 @@ If you're ready to submit a pull request:
 
 ### Code Style
 
-For the python project Follow the [PEP8](https://peps.python.org/pep-0008/) Coding standards.
+For the python project follow the [PEP8](https://peps.python.org/pep-0008/) Coding standards. <br>
+For the c++ projects follow the [Google C++ Style Guide](https://google.github.io/styleguide/cppguide.html), if not mentioned otherisie in the README.MD of the repository.
 
 ### Commit messages
 - The commit message is mainly for the other people, so they should be able to understand it now and six months later. 
