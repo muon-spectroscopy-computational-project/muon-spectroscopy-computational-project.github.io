@@ -5,9 +5,9 @@ Here are the projects currently developed by the MSCP:
 
 * **[pymuon-suite](https://github.com/muon-spectroscopy-computational-project/pymuon-suite)**: A collection of scripts and utilities for muon spectroscopy, containing command line tools to use alongside DFT (Density Functional Theory) simulations. These tools can be used to identify the muon stopping site(s) in a system, compute phonons, and estimate quantum effects involving the muon. The tools support external software including CASTEP and DFTB+ for performing calculations.
 
-* **[muspinsim](https://github.com/muon-spectroscopy-computational-project/muspinsim)**: A package for simulating muon spectroscopy experiments. In particular, it simulates the spin dynamics of a system of a muon plus other spins, namely electrons and atomic nuclei. It can simulate various common experimental setups and account for hyperfine, dipolar and quadrupolar couplings. It is also able to fit its simulations to experimental data, to find the optimal parameters that describe it.
+* **[muspinsim](/muspinsim)**: A package for simulating muon spectroscopy experiments. In particular, it simulates the spin dynamics of a system of a muon plus other spins, namely electrons and atomic nuclei. It can simulate various common experimental setups and account for hyperfine, dipolar and quadrupolar couplings. It is also able to fit its simulations to experimental data, to find the optimal parameters that describe it.
 
-* **[mudirac](https://github.com/muon-spectroscopy-computational-project/mudirac)**: A muonic atom Dirac equation solver.
+* **[mudirac](/mudirac)**: A muonic atom Dirac equation solver.
 
 * **[Muon Galaxy](https://muongalaxy.stfc.ac.uk/)**: An open-source web platform for FAIR data analysis in muon science.
 It provides a GUI for our other tools and allows users to build reproducible analysis workflows and share data and results,
