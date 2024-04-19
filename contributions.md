@@ -1,4 +1,4 @@
-Thank you for your interest in contributing to std-re[p! We welcome contributions from the community to make our project better.
+Thank you for your interest in contributing to the Muon Spectroscopy Computational Project. We welcome contributions from the community to make our project better.
 
 ## Table of Contents
 
@@ -55,7 +55,7 @@ If you're ready to submit a pull request:
 
 ### Code Style
 
-For the python project follow the [PEP8](https://peps.python.org/pep-0008/) Coding standards. <br>
+For the python projects follow the [PEP8](https://peps.python.org/pep-0008/) Coding standards. <br>
 For the c++ projects follow the [Google C++ Style Guide](https://google.github.io/styleguide/cppguide.html), if not mentioned otherisie in the README.MD of the repository.
 
 ### Commit messages
