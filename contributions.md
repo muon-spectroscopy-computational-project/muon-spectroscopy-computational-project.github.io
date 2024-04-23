@@ -1,4 +1,4 @@
-Thank you for your interest in contributing to std-re[p! We welcome contributions from the community to make our project better.
+Thank you for your interest in contributing to the Muon Spectroscopy Computational Project. We welcome contributions from the community to make our project better.
 
 ## Table of Contents
 
