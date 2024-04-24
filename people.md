@@ -4,13 +4,10 @@
 
 * **[Leandro Liborio](https://leandro-liborio.github.io/)**: *[leandro.liborio@stfc.ac.uk](mailto:leandro.liborio@stfc.ac.uk)* 
 * **Martin Plummer**: *[martin.plummer@stfc.ac.uk](mailto:martin.plummer@stfc.ac.uk)*  
-* **Maitrayee Singh**: *[maitrayee.singh@stfc.ac.uk](mailto:maitrayee.singh@stfc.ac.uk)* 
-* **Nalin Gupta**: *[nalin.gupta@stfc.ac.uk](mailto:nalin.gupta@stfc.ac.uk)* 
 * **Subindev Devadasan**: *[subindev.devadasan@stfc.ac.uk](mailto:subindev.devadasan@stfc.ac.uk)* 
 
 #### Data and Software Engineering Group
 
-* **Alejandra Gonzalez-Beltran**: *[alejandra.gonzalez-beltran@stfc.ac.uk](mailto:alejandra.gonzalez-beltran@stfc.ac.uk)*
 * **Patrick Austin**: *[patrick.austin@stfc.ac.uk](mailto:patrick.austin@stfc.ac.uk)* 
 
 
@@ -21,6 +18,7 @@
 * **Francis Pratt**
 * **Stephen Cottrell**
 * **John Wilkinson**
+* **Adrian Hillier**
 
 ### Former Members
 
@@ -33,5 +31,8 @@
 * **Louise Davies** (Scientific Computing Department)  
 * **Anish Mudaraddi** (Scientific Computing Department) 
 * **Joel Davies** (Scientific Computing Department)
-* **Simone Sturniolo** (CoMind)
-* **Eli Chadwick** (The Carpentries)
+* **Simone Sturniolo** (**[CoMind](https://comind.io/)**)
+* **Eli Chadwick** (**[Manchester eScience Lab](https://esciencelab.org.uk/people/)**)
+* **Maitrayee Singh** (Scientific Computing Department)
+* **Nalin Gupta**   (Scientific Computing Department)
+* **Alejandra Gonzalez-Beltran** (**[Culham Centre for Fusion Energy](https://ccfe.ukaea.uk/)**)
