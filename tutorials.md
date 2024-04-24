@@ -45,6 +45,6 @@ and there are some tutorials for using the MSCP's associated Galaxy tools.
 * [MuSpinSim usage tutorial](muspinsim/tutorial)
 
 #### Finding the Muon Stopping Site in **[Materials Galaxy](https://materialsgalaxy.stfc.ac.uk/)**
-* [Finding the muon stopping site with `pymuon-suite` in Galaxy](https://bit.ly/Find_Muon_Stopping_Site)
+* [Finding the muon stopping site with `pymuon-suite` in Galaxy](https://gxy.io/GTN:T00402)
 
 
