@@ -27,7 +27,7 @@ and there are some tutorials for using the MSCP's associated Galaxy tools.
 * [Python setup](tutorial-folder/python-setup)
 * [Installing `pymuon-suite`](tutorial-folder/installing-pymuon-suite)
 * [Installing `muspinsim`](muspinsim/installation/)
-* [Installing `MuDirac`](https://muon-spectroscopy-computational-project.github.io/mudirac/installation.html)
+* [Installing `MuDirac`](mudirac/installation.html)
 
 #### Nuclear Quantum Effects
 
