@@ -111,4 +111,6 @@ The goal of the Platform for Advanced Scientific Computing (PASC) Conference for
 * [Galaxy workflow tools for processing and analysis of catalysis data (Flash Pitch)](https://zenodo.org/records/10076825)\
 **_Presentation to the Catalysis Hub. 2 November, 2023, Harwell, UK._**\
 
+* [SONAR 1: First Workshop on SOftware for NegAtive-muon Research](https://zenodo.org/records/11402948)\
+**_Presentation at the SONAR 1: First Workshop on SOftware for NegAtive-muon Research._**\
 
