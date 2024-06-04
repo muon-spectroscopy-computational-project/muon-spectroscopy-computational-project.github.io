@@ -94,36 +94,36 @@ The goal of the NOBUGS (New Opportunities for Better User Group Software) Confer
 The goal of the Platform for Advanced Scientific Computing (PASC) Conference for 2023 focusses on advances in aggregating, synthesizing, and transitioning across scales, domains, and communities. We presented the capabilites of the Galaxy platform and its specific use in Muon Science and Astrophysics.
 
 * [Computing Simulations for Large Scale Experiments: the Case of Muons​](https://zenodo.org/records/8161368)\
-**_Presentation to the Catalysis Hub. 18 July, 2023, Harwell, UK._**\ 
+**_Presentation to the Catalysis Hub. 18 July, 2023, Harwell, UK._**
 
 * [Computational Techniques to Support Muon Science: the Muon Spectroscopy Computational Project at ISIS](https://zenodo.org/records/8219390)\
-**_Japan Proton Accelerator Research Complex (J-PARC). 4 August, 2023._**\ 
+**_Japan Proton Accelerator Research Complex (J-PARC). 4 August, 2023._**
 
 * [Finding the Muon Stopping Site: pymuon-suite in​ Galaxy​](https://indico.stfc.ac.uk/event/757/)\
 **_Muon User Meeting 2023: celebrating the work of Pabitra Biswas. 11-12 September, 2023,  The Queens College, Oxford, UK._**\
 
 * [Applications to Catalysis Workflows​](https://zenodo.org/records/8219401)\
-**_European Galaxy Days (EGD). 4-6 October, 2023,  Freiburg, Germany._**\
+**_European Galaxy Days (EGD). 4-6 October, 2023,  Freiburg, Germany._**
 
 * [Galaxy workflow tools for processing and analysis of catalysis data (Short Lecture)​](https://zenodo.org/records/10079823)\
-**_Presentation to the Catalysis Hub. 2 November, 2023, Harwell, UK._**\
+**_Presentation to the Catalysis Hub. 2 November, 2023, Harwell, UK._**
 
 * [Galaxy workflow tools for processing and analysis of catalysis data (Flash Pitch)](https://zenodo.org/records/10076825)\
-**_Presentation to the Catalysis Hub. 2 November, 2023, Harwell, UK._**\
+**_Presentation to the Catalysis Hub. 2 November, 2023, Harwell, UK._**
 
 * [SONAR 1: First Workshop on SOftware for NegAtive-muon Research](https://zenodo.org/records/11402948)\
-**_Presentation at the SONAR 1: First Workshop on SOftware for NegAtive-muon Research._**\
+**_Presentation at the SONAR 1: First Workshop on SOftware for NegAtive-muon Research._**
 
-* [DAPHNE4NFDI Task Area 3 seminars](https://zenodo.org/records/11474732)
-**_Presentation given for one of DAPHNE4NFDI Task Area 3 seminars._**\
+* [DAPHNE4NFDI Task Area 3 seminars](https://zenodo.org/records/11474732)\
+**_Presentation given for one of DAPHNE4NFDI Task Area 3 seminars._**
 
 ### Lecture Events
 
 * [Finding the muon stopping site with pymuon-suite in Galaxy](https://training.galaxyproject.org/training-material/topics/materials-science/tutorials/muon-stopping-sites-muairss-uep/tutorial.html)\
-**_[Lecture give at the 2024 ISIS Muon Training School](https://indico.stfc.ac.uk/event/954/overview)._**\
+**_[Lecture give at the 2024 ISIS Muon Training School](https://indico.stfc.ac.uk/event/954/overview)._**
 
 * [SONAR 1: First Workshop on SOftware for NegAtive-muon Research](https://indico.stfc.ac.uk/event/966/)\
-**_Event organised in conjunction with the ISIS Neutron Source and Technion Israel._**\
+**_Event organised in conjunction with the ISIS Neutron Source and Technion Israel._**
 
 * [Using the Galaxy Platform in Large Scale Experiments](https://www.psdi.ac.uk/event/webinar-galaxy-platform/)\
-**_2024 PSDI Webinar._**\
+**_2024 PSDI Webinar._**
