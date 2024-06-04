@@ -114,3 +114,16 @@ The goal of the Platform for Advanced Scientific Computing (PASC) Conference for
 * [SONAR 1: First Workshop on SOftware for NegAtive-muon Research](https://zenodo.org/records/11402948)\
 **_Presentation at the SONAR 1: First Workshop on SOftware for NegAtive-muon Research._**\
 
+* [DAPHNE4NFDI Task Area 3 seminars](https://zenodo.org/records/11474732)
+**_Presentation given for one of DAPHNE4NFDI Task Area 3 seminars._**\
+
+### Lecture Events
+
+* [Finding the muon stopping site with pymuon-suite in Galaxy](https://training.galaxyproject.org/training-material/topics/materials-science/tutorials/muon-stopping-sites-muairss-uep/tutorial.html)\
+**_[Lecture give at the 2024 ISIS Muon Training School](https://indico.stfc.ac.uk/event/954/overview)._**\
+
+* [SONAR 1: First Workshop on SOftware for NegAtive-muon Research](https://indico.stfc.ac.uk/event/966/)\
+**_Event organised in conjunction with the ISIS Neutron Source and Technion Israel._**\
+
+* [Using the Galaxy Platform in Large Scale Experiments](https://www.psdi.ac.uk/event/webinar-galaxy-platform/)\
+**_2024 PSDI Webinar._**\
