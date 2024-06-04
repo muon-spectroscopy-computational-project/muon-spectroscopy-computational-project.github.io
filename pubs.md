@@ -99,8 +99,8 @@ The goal of the Platform for Advanced Scientific Computing (PASC) Conference for
 * [Computational Techniques to Support Muon Science: the Muon Spectroscopy Computational Project at ISIS](https://zenodo.org/records/8219390)\
 **_Japan Proton Accelerator Research Complex (J-PARC). 4 August, 2023._**
 
-* [Finding the Muon Stopping Site: pymuon-suite in​ Galaxy​](https://indico.stfc.ac.uk/event/757/)\
-**_Muon User Meeting 2023: celebrating the work of Pabitra Biswas. 11-12 September, 2023,  The Queens College, Oxford, UK._**\
+* [Finding the Muon Stopping Site: pymuon-suite in​ Galaxy​](https://zenodo.org/records/11476233)\
+**_Muon User Meeting 2023: celebrating the work of Pabitra Biswas. 11-12 September, 2023,  The Queens College, Oxford, UK._**
 
 * [Applications to Catalysis Workflows​](https://zenodo.org/records/8219401)\
 **_European Galaxy Days (EGD). 4-6 October, 2023,  Freiburg, Germany._**
