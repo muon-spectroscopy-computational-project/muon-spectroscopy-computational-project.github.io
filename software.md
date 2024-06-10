@@ -9,7 +9,7 @@ Here are the projects currently developed by the MSCP:
 
 * **[mudirac](/mudirac)**: A muonic atom Dirac equation solver.
 
-* **[Muon Galaxy](https://muongalaxy.stfc.ac.uk/)**: An open-source web platform for FAIR data analysis in muon science.
+* **[Materials Galaxy](https://materialsgalaxy.stfc.ac.uk/)**: An open-source web platform for FAIR data analysis in muon science.
 It provides a GUI for our other tools and allows users to build reproducible analysis workflows and share data and results,
 without any need for prior programming experience. 
 Based on the [Galaxy platform](https://galaxyproject.org).
