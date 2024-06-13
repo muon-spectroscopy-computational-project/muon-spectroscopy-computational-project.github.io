@@ -19,11 +19,15 @@ require. Don't worry though - none of them are very hard to get through. Even
 if you don't know how to use a command line or how to write Python scripts, 
 this could be a good point to start!
 
+We are also deploying the MSCP's tools in **[Materials Galaxy](https://materialsgalaxy.stfc.ac.uk/)**, 
+and there are some tutorials for using the MSCP's associated Galaxy tools.
+
 #### Basics
 
 * [Python setup](tutorial-folder/python-setup)
 * [Installing `pymuon-suite`](tutorial-folder/installing-pymuon-suite)
 * [Installing `muspinsim`](muspinsim/installation/)
+* [Installing `MuDirac`](mudirac/installation.html)
 
 #### Nuclear Quantum Effects
 
@@ -39,4 +43,8 @@ this could be a good point to start!
 
 #### Simulating Muon Spectroscopy Experiments with MuSpinSim
 * [MuSpinSim usage tutorial](muspinsim/tutorial)
+
+#### Finding the Muon Stopping Site in **[Materials Galaxy](https://materialsgalaxy.stfc.ac.uk/)**
+* [Finding the muon stopping site with `pymuon-suite` in Galaxy](https://gxy.io/GTN:T00402)
+
 
