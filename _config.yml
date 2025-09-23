@@ -1,8 +1,15 @@
 theme: jekyll-theme-minimal
-title: "The Muon Spectroscopy Computational Project"
-logo: /images/logo.png
-description: "Software and methods to make the muon spectroscopist's life easier"
+title: "Muon Spectroscopy and Galaxy Computational Project"
+description: "A hub for tutorials, resources, and computational methods."
 show_downloads: false
 github:
   is_project_page: false
   is_user_page: true
+navbar:
+  - name: "Home"
+    link: /
+  - name: "Muon Project"
+    link: /muon/
+  - name: "Galaxy Project"
+    link: /galaxy/
+  
