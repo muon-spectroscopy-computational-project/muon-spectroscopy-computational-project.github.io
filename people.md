@@ -36,3 +36,5 @@
 * **Maitrayee Singh** (Scientific Computing Department)
 * **Nalin Gupta**   (Scientific Computing Department)
 * **Alejandra Gonzalez-Beltran** (**[Culham Centre for Fusion Energy](https://ccfe.ukaea.uk/)**)
+* **Milan Kumar** (Scientific Computing Department)
+* **Ifeom(Ify) Agu** (Scientific Computing Department)
