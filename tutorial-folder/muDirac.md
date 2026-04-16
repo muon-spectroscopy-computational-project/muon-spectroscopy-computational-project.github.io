@@ -39,7 +39,9 @@ The input file is a text file containing rows of the form:
 
 `keyword: value`
 
-A full list of keywords can be found [here](https://github.com/muon-spectroscopy-computational-project/mudirac/blob/master/docs/Keywords.pdf). To learn how to use it, let's try a simple example. Open a text editor and write the following:
+A full list of keywords can be found [here](https://github.com/muon-spectroscopy-computational-project/mudirac/blob/master/docs/Keywords.pdf). 
+
+To learn how to use it, let's try a simple example. Open a text editor and write the following:
 
 ```
 element: Au
