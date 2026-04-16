@@ -39,7 +39,9 @@ The input file is a text file containing rows of the form:
 
 `keyword: value`
 
-A full list of keywords can be found [here](https://github.com/muon-spectroscopy-computational-project/mudirac/blob/master/docs/Keywords.pdf). To learn how to use it, let's try a simple example. Open a text editor and write the following:
+A full list of keywords can be found [here](https://github.com/muon-spectroscopy-computational-project/mudirac/blob/master/docs/Keywords.pdf). 
+
+To learn how to use it, let's try a simple example. Open a text editor and write the following:
 
 ```
 element: Au
@@ -85,6 +87,7 @@ write_spec: T
 nuclear_model: FERMI2
 uehling_correction: T
 electronic_config: Au
+optimise_fermi_parameters: F
 ```
 
 This adds three more lines:
@@ -92,6 +95,10 @@ This adds three more lines:
 `nuclear_model: FERMI2`
 
 This sets the nucleus to be modelled not as a point charge, but as a Fermi 2-term charge distribution, which is far more accurate to reality. The program contains parameters for this distribution for all isotopes of interest in the periodic table. This will account for the finite size of the nucleus, and the overlap of the muon orbitals with it.
+
+`optimise_fermi_parameters: F`
+
+This allows for the two terms of the Fermi charge distribution to be chosen manually. 
 
 `uehling_correction: T`
 
